@@ -17,16 +17,14 @@ public class Controller : MonoBehaviour {
 	
 	void Update()
 	{
-		
-		
-		if( Input.GetKey( KeyCode.UpArrow))
+		if(Input.GetAxis("Vertical") > 0)
 			controller.MoveUp();
-		else  if( Input.GetKey(KeyCode.LeftArrow ))
+		else if(Input.GetAxis("Horizontal") < 0)
 			controller.MoveLeft();
-		else if(  Input.GetKey(KeyCode.RightArrow ))
+		else if(Input.GetAxis("Horizontal") > 0)
 			controller.MoveRight();
 
-		if( Input.GetKeyDown(KeyCode.Z))
+		if(Input.GetButtonDown("Fire1"))
 			shot.Shoot();
 
 		if( Input.GetKeyDown(KeyCode.LeftShift))
