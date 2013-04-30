@@ -1,3 +1,5 @@
+.DS_Store
+
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
@@ -6,5 +8,9 @@
 *.csproj
 *.unityproj
 *.sln
+
+*.pidb
+*.userprefs
+
 ios build
 android.apk
