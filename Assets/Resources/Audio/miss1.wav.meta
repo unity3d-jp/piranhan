@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 360fad8183c4c4256982fa6ee7d221e1
+labels:
+- Cat
+AudioImporter:
+  serializedVersion: 4
+  format: -1
+  quality: .439999998
+  stream: 1
+  3D: 0
+  forceToMono: 0
+  useHardware: 0
+  loopable: 0
+  userData: 

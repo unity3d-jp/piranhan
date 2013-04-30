@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7a092f1046b324e02b0706180a57e973
+labels:
+- Game
+- Prologue
+- Title
+- Music
+- GameOver
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

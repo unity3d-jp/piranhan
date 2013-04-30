@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 35dbb54d4a9f244df9f21f45ca4eea28
+labels:
+- Game
+- Sprite
+- Title
+- Ui
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

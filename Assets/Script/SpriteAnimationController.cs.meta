@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 4927b549167094be8968748dbfc298d8
+labels:
+- Controller
+- Game
+- SpriteAnimation
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - textureManager: {fileID: 11400000, guid: 7f9d8448f718b4fa3a2bc20ca1bfa17a, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
