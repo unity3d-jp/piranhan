@@ -40,15 +40,15 @@ public class GameManager : MonoBehaviour {
 	{
 		GameObject dustbox = GameObject.Find("dustbox") as GameObject;
 		dustbox.BroadcastMessage("Stop", SendMessageOptions.DontRequireReceiver);
-		RandomSpone spone = GameObject.FindObjectOfType(typeof(RandomSpone)) as RandomSpone;
+		RandomSpawn spawn = GameObject.FindObjectOfType(typeof(RandomSpawn)) as RandomSpawn;
 		
-		spone.enabled = false;
+		spawn.enabled = false;
 		
 		
 		GameManager manager = GameObject.FindObjectOfType(typeof(GameManager)) as GameManager;
 		manager.hp -= 1;
 
-		spone.sponeCount = manager.killCount - 1;
+		spawn.spawnCount = manager.killCount - 1;
 		
 		
 		// GameOver
@@ -69,8 +69,8 @@ public class GameManager : MonoBehaviour {
 		CatController cat = GameObject.FindObjectOfType(typeof(CatController)) as CatController;
 		cat.Reset();
 
-		RandomSpone spone = GameObject.FindObjectOfType(typeof(RandomSpone)) as RandomSpone;
-		spone.enabled = true;
+		RandomSpawn spawn = GameObject.FindObjectOfType(typeof(RandomSpawn)) as RandomSpawn;
+		spawn.enabled = true;
 		
 	}
 
@@ -90,8 +90,8 @@ public class GameManager : MonoBehaviour {
 	{
 		GameObject dustbox = GameObject.Find("dustbox") as GameObject;
 		dustbox.BroadcastMessage("Stop", SendMessageOptions.DontRequireReceiver);
-		RandomSpone spone = GameObject.FindObjectOfType(typeof(RandomSpone)) as RandomSpone;
-		spone.enabled = false;
+		RandomSpawn spawn = GameObject.FindObjectOfType(typeof(RandomSpawn)) as RandomSpawn;
+		spawn.enabled = false;
 		
 		Controller controller = GameObject.FindObjectOfType(typeof( Controller )) as Controller;
 		controller.enabled = false;

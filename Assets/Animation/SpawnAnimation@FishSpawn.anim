@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: SponeAnimation@FishSpone
+  m_Name: SpawnAnimation@FishSpawn
   serializedVersion: 3
   m_AnimationType: 1
   m_Compressed: 0
@@ -64,7 +64,7 @@ AnimationClip:
         tangentMode: 21
       m_PreInfinity: 2
       m_PostInfinity: 2
-    attribute: sponeParcent
+    attribute: spawnPercent
     path: 
     classID: 114
     script: {fileID: 11500000, guid: 06069058d918e4e83a71e658dd0d5de0, type: 3}
@@ -139,7 +139,7 @@ AnimationClip:
         tangentMode: 21
       m_PreInfinity: 2
       m_PostInfinity: 2
-    attribute: sponeParcent
+    attribute: spawnPercent
     path: 
     classID: 114
     script: {fileID: 11500000, guid: 06069058d918e4e83a71e658dd0d5de0, type: 3}

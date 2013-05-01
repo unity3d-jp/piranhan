@@ -547,7 +547,7 @@ GameObject:
   - 114: {fileID: 572430218}
   - 111: {fileID: 572430219}
   m_Layer: 0
-  m_Name: spone
+  m_Name: Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -578,8 +578,8 @@ MonoBehaviour:
   m_Name: 
   manager: {fileID: 404278980}
   fishPrefab: {fileID: 100000, guid: 4322f8c54400d4a0f81a3b2babbdb090, type: 2}
-  sponeParcent: 2
-  sponeCount: 0
+  spawnParcent: 2
+  spawnCount: 0
   left: {fileID: 83508534}
   right: {fileID: 712144126}
 --- !u!111 &572430219

@@ -1,14 +1,14 @@
 using UnityEngine;
 using System.Collections;
 
-public class RandomSpone : MonoBehaviour
+public class RandomSpawn : MonoBehaviour
 {
 	[SerializeField] GameManager manager;
 	[SerializeField] GameObject fishPrefab;
 	
-	public float sponeParcent = 2;
+	public float spawnPercent = 2;
 	
-	public int sponeCount = 0;
+	public int spawnCount = 0;
 
 	[SerializeField] Transform left = null, right = null;
 	
@@ -28,7 +28,7 @@ public class RandomSpone : MonoBehaviour
 		if( dustBox == null)
 			dustBox = new GameObject("dustbox");
 
-		StartCoroutine(SponeLoop());
+		StartCoroutine(SpawnLoop());
 		animation.enabled = true;
 	}
 	
@@ -39,22 +39,22 @@ public class RandomSpone : MonoBehaviour
 		dustBox = null;
 	}
 	
-	IEnumerator SponeLoop ()
+	IEnumerator SpawnLoop ()
 	{
 		while (true) {
-			Spone ();
-			yield return new WaitForSeconds(sponeParcent);
+			Spawn ();
+			yield return new WaitForSeconds(spawnPercent);
 		}
 	}
 	
 	
-	public void Spone ()
+	public void Spawn ()
 	{
-		// spone limit
-		if( manager.clearCount <= sponeCount  )
+		// spawn limit
+		if( manager.clearCount <= spawnCount  )
 			return;
 		
-		sponeCount ++;
+		spawnCount ++;
 		
 		if( dustBox == null)
 			dustBox = new GameObject("dustbox");
