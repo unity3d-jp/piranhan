@@ -197,7 +197,7 @@ MonoBehaviour:
   leftWalk: {fileID: 2136746535}
   rightWalk: {fileID: 2136746534}
   upWalk: {fileID: 2136746536}
-  filed: {fileID: 2136746537}
+  failed: {fileID: 2136746537}
   flash: {fileID: 2136746538}
   Direct: {x: 0, y: 0, z: 0}
 --- !u!114 &52686130

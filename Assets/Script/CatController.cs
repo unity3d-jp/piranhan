@@ -7,7 +7,7 @@ public class CatController : MonoBehaviour {
 	float speed = 60;
 	
 	[SerializeField]
-	SpriteAnimationController leftWalk, rightWalk, upWalk , filed;
+	SpriteAnimationController leftWalk, rightWalk, upWalk , failed;
 	
 	[SerializeField]
 	Flashing flash;
@@ -74,7 +74,7 @@ public class CatController : MonoBehaviour {
 		if( collision.gameObject.tag.Equals("Enemy"))
 		{
 			GameManager.Miss();
-			filed.enabled = true;
+			failed.enabled = true;
 			collider.enabled = false;
 			animation.Play("MissAnimation@Cat");
 			GetComponent<Controller>().enabled = false;
