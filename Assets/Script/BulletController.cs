@@ -8,7 +8,7 @@ public class BulletController : MonoBehaviour {
 	
 	public float speed = 4;
 	
-	private readonly static float margine = 0.02f;
+	private readonly static float margin = 0.02f;
 	
 	void Start () {
 		GameObject dust = GameObject.Find("dustbox") as GameObject;
@@ -28,8 +28,8 @@ public class BulletController : MonoBehaviour {
 		transform.position += direct * speed;
 		
 		Vector3 bulletScreenPos = Camera.mainCamera.WorldToViewportPoint( transform.position);
-		if( bulletScreenPos.x  < 0 - margine || bulletScreenPos.x  > 1 + margine || 
-			bulletScreenPos.y  < 0 - margine || bulletScreenPos.y  > 1 + margine )
+		if( bulletScreenPos.x  < 0 - margin || bulletScreenPos.x  > 1 + margin || 
+			bulletScreenPos.y  < 0 - margin || bulletScreenPos.y  > 1 + margin )
 			Destroy(gameObject);
 	}
 	
