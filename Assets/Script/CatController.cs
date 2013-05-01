@@ -13,34 +13,34 @@ public class CatController : MonoBehaviour {
 	Flashing flash;
 	
 	[HideInInspector]
-	public Vector3 Direct;
+	public Vector3 direction;
 	
 	private Vector3 firstPosition;
 	
 	void Start()
 	{
 		firstPosition = transform.position;
-		Direct = Vector3.up;
+		direction = Vector3.up;
 	}
 	
 	public void MoveLeft()
 	{
-		Direct = Vector3.left;
-		transform.localPosition += Direct * speed * Time.deltaTime;
+		direction = Vector3.left;
+		transform.localPosition += direction * speed * Time.deltaTime;
 		leftWalk.enabled = true;
 	}
 	
 	public void MoveRight()
 	{
-		Direct = Vector3.right;
-		transform.localPosition += Direct * speed * Time.deltaTime;
+		direction = Vector3.right;
+		transform.localPosition += direction * speed * Time.deltaTime;
 		rightWalk.enabled = true;
 	}
 	
 	public void MoveUp()
 	{
 		upWalk.enabled = true;
-		Direct = Vector3.up;
+		direction = Vector3.up;
 	}
 	
 	
@@ -52,7 +52,7 @@ public class CatController : MonoBehaviour {
 		GetComponent<Controller>().enabled = true;
 		upWalk.enabled = true;
 		
-		Direct = Vector3.up;
+		direction = Vector3.up;
 		
 		StartCoroutine(Flashing());
 	}

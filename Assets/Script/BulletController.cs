@@ -4,7 +4,7 @@ using System.Collections;
 public class BulletController : MonoBehaviour {
 	
 	[HideInInspector]
-	public Vector3 direct = Vector3.up;
+	public Vector3 direction = Vector3.up;
 	
 	public float speed = 4;
 	
@@ -25,7 +25,7 @@ public class BulletController : MonoBehaviour {
 		if( Time.timeScale == 0 )
 			return;
 		
-		transform.position += direct * speed;
+		transform.position += direction * speed;
 		
 		Vector3 bulletScreenPos = Camera.mainCamera.WorldToViewportPoint( transform.position);
 		if( bulletScreenPos.x  < 0 - margin || bulletScreenPos.x  > 1 + margin || 
