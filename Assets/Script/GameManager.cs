@@ -8,14 +8,15 @@ public class GameManager : MonoBehaviour {
 	[HideInInspector]
 	public int score = 0;
 
-	int killCount = 0;
-	
 	public int hp = 3;
+
+	private int killCount = 0;
 	private Camera mainCamera;
 	
-	void Start()
+	void Awake()
 	{
-		DontDestroyOnLoad( gameObject );
+		mainCamera = Camera.mainCamera;
+		PlayerPrefs.SetInt("score", 0);
 	}
 
 	
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour {
 			return;
 
 		manager.score += point;
+		PlayerPrefs.SetInt("score", manager.score);
 		
 		int highScore = Mathf.Max( manager.score, PlayerPrefs.GetInt("highscore"));
 		PlayerPrefs.SetInt("highscore", highScore );

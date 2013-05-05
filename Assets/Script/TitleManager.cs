@@ -5,24 +5,6 @@ public class TitleManager : MonoBehaviour {
 	
 	[SerializeField]
 	Flashing flash;
-	
-	void Start()
-	{
-		MusicController[] musics = FindObjectsOfType(typeof(MusicController)) as MusicController[];
-		foreach( MusicController music in musics )
-		{
-			Destroy ( music.gameObject );
-		}
-
-		
-		GameManager[] managers = FindObjectsOfType(typeof( GameManager))  as GameManager[];
-		
-		
-		foreach( GameManager mangager in managers )
-		{
-			Destroy (mangager.gameObject );
-		}
-	}
 
 	// Update is called once per frame
 	void Update () {
@@ -36,9 +18,6 @@ public class TitleManager : MonoBehaviour {
 	
 	IEnumerator GoPrologue()
 	{
-		//iTween.CameraFadeAdd();
-		//iTween.CameraFadeTo(1, 1);
-		
 		GetComponent<PlaySound>().PlayOneShot();
 		
 		flash.enabled = false;
