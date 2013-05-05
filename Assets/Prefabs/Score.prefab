@@ -97,7 +97,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 547aded75c0a92f44a65a8f2da85f6f6, type: 3}
+  - {fileID: 2100000, guid: 35f0c2c32614b4899943319abc160abf, type: 3}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -115,7 +115,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 547aded75c0a92f44a65a8f2da85f6f6, type: 3}
+  - {fileID: 2100000, guid: 35f0c2c32614b4899943319abc160abf, type: 3}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -138,7 +138,7 @@ TextMesh:
   m_FontSize: 47
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 12800000, guid: 547aded75c0a92f44a65a8f2da85f6f6, type: 3}
+  m_Font: {fileID: 12800000, guid: 35f0c2c32614b4899943319abc160abf, type: 3}
 --- !u!102 &10200002
 TextMesh:
   serializedVersion: 3
@@ -156,7 +156,7 @@ TextMesh:
   m_FontSize: 24
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 12800000, guid: 547aded75c0a92f44a65a8f2da85f6f6, type: 3}
+  m_Font: {fileID: 12800000, guid: 35f0c2c32614b4899943319abc160abf, type: 3}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
