@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour {
 	int killCount = 0;
 	
 	public int hp = 3;
+	private Camera mainCamera;
 	
 	void Start()
 	{
@@ -76,14 +77,14 @@ public class GameManager : MonoBehaviour {
 
 	public void Fadeout()
 	{
-		iTween.CameraFadeAdd();
-		iTween.CameraFadeTo(0, 0.001f);
+		if( mainCamera != null)
+			mainCamera.enabled = true;
 	}
 	
 	public void Fadein()
 	{
-		iTween.CameraFadeAdd();
-		iTween.CameraFadeTo(1, 0.001f);
+		if( mainCamera != null)
+			mainCamera.enabled = false;
 	}
 	
 	IEnumerator GameClear()
