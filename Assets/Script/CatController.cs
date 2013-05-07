@@ -7,7 +7,16 @@ public class CatController : MonoBehaviour {
 	float speed = 60;
 	
 	[SerializeField]
-	SpriteAnimationController leftWalk, rightWalk, upWalk , failed;
+	SpriteAnimationController leftWalk;
+
+	[SerializeField]
+	SpriteAnimationController rightWalk;
+
+	[SerializeField]
+	SpriteAnimationController upWalk;
+
+	[SerializeField]
+	SpriteAnimationController failed;
 	
 	[SerializeField]
 	Flashing flash;

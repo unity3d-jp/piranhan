@@ -3,12 +3,23 @@ using System.Collections;
 
 public class FishController : MonoBehaviour
 {
-	[SerializeField]
-	int jumpingScore = 100, walkingScore = 20;
-	
 	public float speed = 10;
+
 	[SerializeField]
-	SpriteAnimationController leftMove, rightMove, upMove, fall, dead;
+	SpriteAnimationController leftMove;
+
+	[SerializeField]
+	SpriteAnimationController rightMove;
+
+	[SerializeField]
+	SpriteAnimationController upMove;
+
+	[SerializeField]
+	SpriteAnimationController fall;
+
+	[SerializeField]
+	SpriteAnimationController dead;
+
 	public enum FishState
 	{
 		jumping,
