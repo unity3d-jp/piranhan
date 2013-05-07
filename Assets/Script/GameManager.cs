@@ -9,9 +9,11 @@ public class GameManager : MonoBehaviour {
 	public int score = 0;
 
 	public int hp = 3;
+	
+	[SerializeField]
+	Camera mainCamera;
 
 	private int killCount = 0;
-	private Camera mainCamera;
 	
 	void Awake()
 	{
