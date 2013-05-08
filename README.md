@@ -1,4 +1,4 @@
 piranhan
 ========
 
-http://unity3d-jp.github.io/piranhan/
+これは製品開発用ブランチです。
