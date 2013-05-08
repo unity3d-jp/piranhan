@@ -65,10 +65,11 @@ public class FishController : MonoBehaviour
 	public void TouchDown ()
 	{
 		state = FishState.walking;
+
 		transform.position = 
 			
 				new Vector3( transform.position.x,
-								-41.98995f,
+								-42f,
 								transform.position.z);
 	}
 	
@@ -83,7 +84,7 @@ public class FishController : MonoBehaviour
 		else
 			leftMove.enabled = true;
 		
-		transform.position += direct * Time.deltaTime * speed;
+		transform.position += (Vector3.right * direct.x) * Time.deltaTime * speed;
 	}
 	
 	IEnumerator Dead ()

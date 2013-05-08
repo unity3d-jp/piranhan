@@ -175,7 +175,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.98333335
+  - time: 2
     functionName: TouchDown
     data: 
     objectReferenceParameter: {fileID: 0}
