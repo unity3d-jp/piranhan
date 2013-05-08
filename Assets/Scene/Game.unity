@@ -132,11 +132,11 @@ GameObject:
   - 4: {fileID: 52686126}
   - 135: {fileID: 52686127}
   - 54: {fileID: 52686128}
-  - 114: {fileID: 52686129}
   - 114: {fileID: 52686131}
   - 111: {fileID: 52686132}
   - 114: {fileID: 52686133}
   - 114: {fileID: 52686130}
+  - 114: {fileID: 52686129}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -151,7 +151,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 52686125}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -51.9699554, z: 0}
+  m_LocalPosition: {x: 0, y: -33.9383087, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2136746533}
@@ -191,14 +191,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 52686125}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 371ce573f0e964952aea8e035f0b26a9, type: 3}
+  m_Script: {fileID: 11500000, guid: 69ce401a652f64dff9fffb0bf9c7c6a9, type: 3}
   m_Name: 
   speed: 60
-  leftWalk: {fileID: 2136746535}
-  rightWalk: {fileID: 2136746534}
-  upWalk: {fileID: 2136746536}
-  failed: {fileID: 2136746537}
-  flash: {fileID: 2136746538}
   direction: {x: 0, y: 0, z: 0}
 --- !u!114 &52686130
 MonoBehaviour:
@@ -617,7 +612,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 572430216}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.92410326, y: -57.3225174, z: 0}
+  m_LocalPosition: {x: 7.92410326, y: -42.7182846, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 83508534}
@@ -1600,6 +1595,7 @@ GameObject:
   - 114: {fileID: 2136746536}
   - 114: {fileID: 2136746537}
   - 114: {fileID: 2136746538}
+  - 114: {fileID: 2136746539}
   m_Layer: 0
   m_Name: mpc
   m_TagString: Untagged
@@ -1703,3 +1699,18 @@ MonoBehaviour:
   m_Name: 
   onTime: .100000001
   offTime: .100000001
+--- !u!114 &2136746539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2136746530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 371ce573f0e964952aea8e035f0b26a9, type: 3}
+  m_Name: 
+  leftWalk: {fileID: 2136746535}
+  rightWalk: {fileID: 2136746534}
+  upWalk: {fileID: 2136746536}
+  failed: {fileID: 2136746537}
+  flash: {fileID: 2136746538}

@@ -1,10 +1,18 @@
 using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(CatController))]
 public class ShotController : MonoBehaviour {
 	
 	[SerializeField]
 	GameObject bulletPrefab;
+	
+	private CatController cat;
+	
+	void Start()
+	{
+		cat = GetComponent<CatController>();
+	}
 	
 	public void Shoot()
 	{
@@ -14,7 +22,6 @@ public class ShotController : MonoBehaviour {
 		GameObject bullet = GameObject.Instantiate( bulletPrefab ) as GameObject;
 		bullet.transform.position = transform.position + Vector3.down * 0.1f + Vector3.forward * 0.2f;
 		
-		CatController cat = GetComponent<CatController>();
 		Vector3 direction = cat.direction;
 		string bulletFileName = string.Empty;
 
@@ -24,8 +31,6 @@ public class ShotController : MonoBehaviour {
 			bulletFileName = "Texture/bullet-l1";
 		else if( direction == Vector3.right )
 			bulletFileName = "Texture/bullet-r1";
-		
-		
 		
 
 		bullet.renderer.material.mainTexture = Resources.Load(bulletFileName) as Texture;

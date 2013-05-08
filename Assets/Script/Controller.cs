@@ -1,18 +1,15 @@
 using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(CatController))]
 public class Controller : MonoBehaviour {
 
-	CatController controller;
-	ShotController shot;
+	private CatController controller;
+	private ShotController shot;
 	
-	// Use this for initialization
-	void Start () {
-		
+	void Start()
+	{
 		controller = GetComponent<CatController>();
 		shot = GetComponent<ShotController>();
-	
 	}
 	
 	void Update()
