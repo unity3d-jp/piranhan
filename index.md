@@ -3,13 +3,13 @@ layout: post
 title: Top
 ---
 
-![Title Screen](/piranhan/images/proto-title.png)
+![Title Screen](images/proto-title.png)
 
 ## 「ピラニアン」とは
 
 このゲーム「ピラニアン」は「[第２回 京都インディーズゲームセミナー Unity入門講座](http://atnd.org/events/38509)」のライブコーディングセッションにおいて作成されたゲームです。約 1 時間のセッションの中で 2D ゲームのプロトタイプを作成しました。
 
-![Screenshot](/piranhan/images/proto-game.png)
+![Screenshot](images/proto-game.png)
 
 すべての絵素材および音素材は[開発室 Pixel](http://hp.vector.co.jp/authors/VA022293/) の天谷大輔氏によって作成されました。プログラミングおよび Unity 上の作業は[ユニティー・テクノロジーズ・ジャパン](http://japan.unity3d.com/)が担当しました。
 
