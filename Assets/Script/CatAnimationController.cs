@@ -1,32 +1,27 @@
 using UnityEngine;
 using System.Collections;
 
-public class CatAnimationController : MonoBehaviour {
+public class CatAnimationController : MonoBehaviour
+{
 	
 	
 	public SpriteAnimationController leftWalk = null;
-
 	public SpriteAnimationController rightWalk = null;
-
 	public SpriteAnimationController upWalk = null;
-
 	public SpriteAnimationController failed = null;
-	
 	public Flashing flash;
 	
-	
-	public void MoveRight()
+	public void MoveRight ()
 	{
 		rightWalk.enabled = true;
 	}
 	
-	public void MoveLeft()
+	public void MoveLeft ()
 	{
 		leftWalk.enabled = true;
 	}
 	
-	
-	public IEnumerator Flashing()
+	public IEnumerator Flashing ()
 	{
 		flash.enabled = true;
 

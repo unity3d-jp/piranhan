@@ -1,36 +1,34 @@
 using UnityEngine;
 using System.Collections;
 
-public class LifeController : MonoBehaviour {
+public class LifeController : MonoBehaviour
+{
 	
 	[SerializeField]
 	GameObject[] life;
-	
 	GameManager manager;
 	
-	void Awake()
+	void Awake ()
 	{
-		manager = FindObjectOfType(typeof(GameManager)) as GameManager;
+		manager = FindObjectOfType (typeof(GameManager)) as GameManager;
 	}
 	
-	void OnEnable()
+	void OnEnable ()
 	{
-		StartCoroutine(LifeCheck());
+		StartCoroutine (LifeCheck ());
 	}
 	
-	void OnDisable()
+	void OnDisable ()
 	{
-		StopAllCoroutines();
+		StopAllCoroutines ();
 	}
 	
-	IEnumerator LifeCheck()
+	IEnumerator LifeCheck ()
 	{
-		while(true)
-		{
+		while (true) {
 			
-			for( int i=0; i< life.Length; i++)
-			{
-				life[i].renderer.enabled = i < manager.hp;
+			for (int i=0; i< life.Length; i++) {
+				life [i].renderer.enabled = i < manager.hp;
 			}
 			
 			yield return new WaitForSeconds(0.5f);

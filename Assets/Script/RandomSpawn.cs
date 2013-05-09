@@ -3,38 +3,37 @@ using System.Collections;
 
 public class RandomSpawn : MonoBehaviour
 {
-	[SerializeField] GameManager manager;
-	[SerializeField] GameObject fishPrefab;
-	
+	[SerializeField]
+	GameManager manager;
+	[SerializeField]
+	GameObject fishPrefab;
 	public float spawnPercent = 2;
-	
 	public int spawnCount = 0;
-
-	[SerializeField] Transform left = null, right = null;
-	
+	[SerializeField]
+	Transform left = null, right = null;
 	private GameObject dustBox = null;
 
 	void OnDrawGizmosSelected ()
 	{
-		if( left == null || right == null)
+		if (left == null || right == null)
 			return;
 		
 		Gizmos.DrawLine (left.position, right.position);
 	}
 
-	void OnEnable()
+	void OnEnable ()
 	{
-		dustBox = GameObject.Find("dustbox") as GameObject;
-		if( dustBox == null)
-			dustBox = new GameObject("dustbox");
+		dustBox = GameObject.Find ("dustbox") as GameObject;
+		if (dustBox == null)
+			dustBox = new GameObject ("dustbox");
 
-		StartCoroutine(SpawnLoop());
+		StartCoroutine (SpawnLoop ());
 		animation.enabled = true;
 	}
 	
-	void OnDisable()
+	void OnDisable ()
 	{
-		StopAllCoroutines();
+		StopAllCoroutines ();
 		animation.enabled = false;
 		dustBox = null;
 	}
@@ -47,17 +46,16 @@ public class RandomSpawn : MonoBehaviour
 		}
 	}
 	
-	
 	public void Spawn ()
 	{
 		// spawn limit
-		if( manager.clearCount <= spawnCount  )
+		if (manager.clearCount <= spawnCount)
 			return;
 		
 		spawnCount ++;
 		
-		if( dustBox == null)
-			dustBox = new GameObject("dustbox");
+		if (dustBox == null)
+			dustBox = new GameObject ("dustbox");
 		
 		float position = Random.Range (left.transform.position.x, right.transform.position.x);
 		

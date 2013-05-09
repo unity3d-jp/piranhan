@@ -1,10 +1,12 @@
 using UnityEngine;
 using System.Collections;
 
-public class PrologueManager : MonoBehaviour {
+public class PrologueManager : MonoBehaviour
+{
 
 	// Use this for initialization
-	IEnumerator Start () {
+	IEnumerator Start ()
+	{
 		
 		
 		yield return new WaitForSeconds(3.5f);
@@ -14,7 +16,7 @@ public class PrologueManager : MonoBehaviour {
 
 		yield return new WaitForSeconds(1f);
 
-		Application.LoadLevel("Game");
+		Application.LoadLevel ("Game");
 	}
 	
 	

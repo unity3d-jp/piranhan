@@ -2,31 +2,30 @@ using UnityEngine;
 using System.Collections;
 
 [RequireComponent(typeof(TextMesh))]
-public class ScoreController : MonoBehaviour {
+public class ScoreController : MonoBehaviour
+{
 	
 	TextMesh tmesh;
 	
-	void Awake()
+	void Awake ()
 	{
-		tmesh = GetComponent<TextMesh>();
+		tmesh = GetComponent<TextMesh> ();
 	}
 	
-	
-	void OnEnable()
+	void OnEnable ()
 	{
-		StartCoroutine(ScoreUpdate());
+		StartCoroutine (ScoreUpdate ());
 	}
 	
-	void OnDisable()
+	void OnDisable ()
 	{
-		StopAllCoroutines();
+		StopAllCoroutines ();
 	}
 	
-	IEnumerator ScoreUpdate()
+	IEnumerator ScoreUpdate ()
 	{
-		while(true)
-		{
-			tmesh.text = string.Format("{0}", PlayerPrefs.GetInt("score"), 0);
+		while (true) {
+			tmesh.text = string.Format ("{0}", PlayerPrefs.GetInt ("score"), 0);
 			yield return new WaitForSeconds(0.3f);
 		}
 	}

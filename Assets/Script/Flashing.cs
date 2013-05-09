@@ -1,30 +1,30 @@
 using UnityEngine;
 using System.Collections;
 
-public class Flashing : MonoBehaviour {
+public class Flashing : MonoBehaviour
+{
 	
 	[Range(0.01f, 1f)]
 	public float onTime = 0.7f;
-	
 	[Range(0.01f, 1f)]
 	public float offTime = 0.3f;
 	
-	void OnEnable()
+	void OnEnable ()
 	{
-		StartCoroutine(Flash ());
+		StartCoroutine (Flash ());
 	}
 	
-	void OnDisable()
+	void OnDisable ()
 	{
-		StopAllCoroutines();
+		StopAllCoroutines ();
 		renderer.enabled = true;
 	}
 	
 	// Use this for initialization
-	IEnumerator Flash () {
+	IEnumerator Flash ()
+	{
 	
-		while(true)
-		{
+		while (true) {
 			renderer.enabled = true;
 			yield return new WaitForSeconds(onTime);
 

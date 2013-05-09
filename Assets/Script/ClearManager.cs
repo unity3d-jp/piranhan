@@ -1,25 +1,27 @@
 using UnityEngine;
 using System.Collections;
 
-public class ClearManager : MonoBehaviour {
+public class ClearManager : MonoBehaviour
+{
 
 	bool pause = true;
 	[SerializeField]
 	int waitTime = 3;
 	
-	IEnumerator Start()
+	IEnumerator Start ()
 	{
 		yield return new WaitForSeconds(waitTime);
 		
 		pause = false;
 	}
 	
-	void Update () {
+	void Update ()
+	{
 		
-		if( pause )
+		if (pause)
 			return;
 		
-		if( Input.GetButtonDown("Fire1") )
-			Application.LoadLevel("Title");
+		if (Input.GetButtonDown ("Fire1"))
+			Application.LoadLevel ("Title");
 	}
 }
