@@ -60,7 +60,6 @@ public class CatController : MonoBehaviour
 	
 	void Dead ()
 	{
-		GameObject manager = GameObject.FindWithTag ("GameManager") as GameObject;
-		StartCoroutine (manager.GetComponent<GameManager> ().GameOver ());
+		StartCoroutine (GameManager.instance.GameOver ());
 	}
 }

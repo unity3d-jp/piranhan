@@ -85,11 +85,11 @@ public class FishController : MonoBehaviour
 	{
 		string scoreName = string.Empty;
 		if (state == FishState.Walking) {
-			GameManager.AddScore (20);
+			GameManager.DestroyEnemy (20);
 			scoreName = "Prefab/point020";
 		}
 		if (state == FishState.Fall) {
-			GameManager.AddScore (100);
+			GameManager.DestroyEnemy (100);
 			scoreName = "Prefab/point100";
 		}
 		

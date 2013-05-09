@@ -1,42 +1,34 @@
 using UnityEngine;
 using System.Collections;
 
-public class GameManager : MonoBehaviour
+public class GameManager : MonoSingleton<GameManager>
 {
-
 	public int clearCount = 10;
-	[HideInInspector]
-	public int score = 0;
 	public int hp = 3;
 	[SerializeField]
 	Camera mainCamera;
 	private int killCount = 0;
 	
-	void Awake ()
+	public override void Init ()
 	{
 		mainCamera = Camera.mainCamera;
-		PlayerPrefs.SetInt ("score", 0);
 	}
-	
-	public static void AddScore (int point)
+
+	public static void DestroyEnemy (int addScorePoint)
 	{
-		GameManager manager = GameObject.FindObjectOfType (typeof(GameManager)) as GameManager;
-		if (manager == null)
-			return;
+		ScoreManager.instance.AddScore (addScorePoint);
+		AddKillCount ();
+	}
 
-		manager.score += point;
-		PlayerPrefs.SetInt ("score", manager.score);
-		
-		int highScore = Mathf.Max (manager.score, PlayerPrefs.GetInt ("highscore"));
-		PlayerPrefs.SetInt ("highscore", highScore);
-
+	private static void AddKillCount ()
+	{
+		GameManager manager = GameManager.instance;
 		manager.killCount += 1;
-		
 		// clear
 		if (manager.killCount >= manager.clearCount)
 			manager.StartCoroutine (manager.GameClear ());
 	}
-	
+
 	public static void Miss ()
 	{
 		
@@ -46,7 +38,7 @@ public class GameManager : MonoBehaviour
 		spawn.enabled = false;
 		
 		
-		GameManager manager = GameObject.FindObjectOfType (typeof(GameManager)) as GameManager;
+		GameManager manager = GameManager.instance;
 		manager.hp -= 1;
 
 		spawn.spawnCount = manager.killCount - 1;
@@ -92,7 +84,7 @@ public class GameManager : MonoBehaviour
 		RandomSpawn spawn = GameObject.FindObjectOfType (typeof(RandomSpawn)) as RandomSpawn;
 		spawn.enabled = false;
 		
-		Controller controller = GameObject.FindObjectOfType (typeof(Controller)) as Controller;
+		PlayerController controller = GameObject.FindObjectOfType (typeof(PlayerController)) as PlayerController;
 		controller.enabled = false;
 		
 		MusicController sound = GameObject.FindObjectOfType (typeof(MusicController))  as MusicController;
