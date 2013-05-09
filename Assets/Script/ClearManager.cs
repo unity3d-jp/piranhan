@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class ClearManager : MonoBehaviour
+public class ClearManager : MonoSingleton<ClearManager>
 {
 
 	bool pause = true;
@@ -21,7 +21,9 @@ public class ClearManager : MonoBehaviour
 		if (pause)
 			return;
 		
-		if (Input.GetButtonDown ("Fire1"))
+		if (Input.GetButtonDown ("Fire1")) {
+			ScoreManager.instance.Reset ();
 			Application.LoadLevel ("Title");
+		}
 	}
 }

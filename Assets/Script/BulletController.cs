@@ -11,7 +11,7 @@ public class BulletController : MonoBehaviour
 	
 	void Start ()
 	{
-		transform.parent = Dustbox.Instance.transform;
+		transform.parent = Dustbox.instance.transform;
 		
 		AudioClip shootAudio = Resources.Load ("Audio/shot1") as AudioClip;
 		AudioSource.PlayClipAtPoint (shootAudio, Vector3.zero);
@@ -23,7 +23,7 @@ public class BulletController : MonoBehaviour
 		if (Time.timeScale == 0)
 			return;
 		
-		transform.Translate (direction * speed);
+		transform.Translate (direction * speed, Space.World);
 		
 		Vector3 bulletScreenPos = Camera.mainCamera.WorldToViewportPoint (transform.position);
 		if (bulletScreenPos.x < 0 - margin || bulletScreenPos.x > 1 + margin || 

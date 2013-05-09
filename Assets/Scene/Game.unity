@@ -117,6 +117,10 @@ Prefab:
       propertyPath: far clip plane
       value: 185.050003
       objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: ff779190920e34fc7a117331fd004fc7, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff779190920e34fc7a117331fd004fc7, type: 2}
   m_RootGameObject: {fileID: 2091547415}
@@ -194,7 +198,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69ce401a652f64dff9fffb0bf9c7c6a9, type: 3}
   m_Name: 
   speed: 60
-  direction: {x: 0, y: 0, z: 0}
 --- !u!114 &52686130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -419,7 +422,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e28406010151405babb3c5a80cf02af, type: 3}
   m_Name: 
   clearCount: 20
-  score: 0
   hp: 3
   mainCamera: {fileID: 357310646}
 --- !u!111 &404278981
@@ -1714,3 +1716,4 @@ MonoBehaviour:
   upWalk: {fileID: 2136746536}
   failed: {fileID: 2136746537}
   flash: {fileID: 2136746538}
+  direction: {x: 0, y: 0, z: 0}

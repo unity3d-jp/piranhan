@@ -17,14 +17,14 @@ public class FishController : MonoBehaviour
 
 	public enum FishState
 	{
-		jumping,
-		fall,
-		walking,
-		dead
+		Jumping,
+		Fall,
+		Walking,
+		Dead
 	}
 	
 	[SerializeField]
-	FishState state = FishState.jumping;
+	FishState state = FishState.Jumping;
 	AudioClip deadSound;
 	GameObject player;
 	
@@ -38,13 +38,13 @@ public class FishController : MonoBehaviour
 	
 	void Update ()
 	{
-		if (state == FishState.walking)
+		if (state == FishState.Walking)
 			Walking ();
 	}
 	
 	public void JumpHighPosition ()
 	{
-		state = FishState.fall;
+		state = FishState.Fall;
 		transform.position = new Vector3 (transform.position.x, transform.position.y, 0);
 		fall.enabled = true;
 		collider.enabled = true;
@@ -58,7 +58,7 @@ public class FishController : MonoBehaviour
 	
 	public void TouchDown ()
 	{
-		state = FishState.walking;
+		state = FishState.Walking;
 
 		transform.position = 
 			
@@ -84,18 +84,18 @@ public class FishController : MonoBehaviour
 	IEnumerator Dead ()
 	{
 		string scoreName = string.Empty;
-		if (state == FishState.walking) {
-			GameManager.AddScore (20);
+		if (state == FishState.Walking) {
+			GameManager.DestroyEnemy (20);
 			scoreName = "Prefab/point020";
 		}
-		if (state == FishState.fall) {
-			GameManager.AddScore (100);
+		if (state == FishState.Fall) {
+			GameManager.DestroyEnemy (100);
 			scoreName = "Prefab/point100";
 		}
 		
 		dead.enabled = true;
 		collider.enabled = false;
-		state = FishState.dead;
+		state = FishState.Dead;
 
 		animation.Stop ();
 		
