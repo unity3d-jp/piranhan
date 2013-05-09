@@ -6,12 +6,12 @@ public class BulletController : MonoBehaviour
 	
 	[HideInInspector]
 	public Vector3 direction = Vector3.up;
-	public float speed = 4;
-	private readonly static float margin = 0.02f;
+	public float speed = 4f;
+	private const float margin = 0.02f;
 	
 	void Start ()
 	{
-		GameObject dust = GameObject.Find ("dustbox") as GameObject;
+		GameObject dust = GameObject.Find ("dustbox");
 		if (dust == null)
 			dust = new GameObject ("dustbox");
 		transform.parent = dust.transform;
@@ -26,7 +26,7 @@ public class BulletController : MonoBehaviour
 		if (Time.timeScale == 0)
 			return;
 		
-		transform.position += direction * speed;
+		transform.Translate (direction * speed);
 		
 		Vector3 bulletScreenPos = Camera.mainCamera.WorldToViewportPoint (transform.position);
 		if (bulletScreenPos.x < 0 - margin || bulletScreenPos.x > 1 + margin || 

@@ -7,7 +7,7 @@ public class RandomSpawn : MonoBehaviour
 	GameManager manager;
 	[SerializeField]
 	GameObject fishPrefab;
-	public float spawnPercent = 2;
+	public float spawnPercent = 2f;
 	public int spawnCount = 0;
 	[SerializeField]
 	Transform left = null, right = null;
@@ -23,7 +23,7 @@ public class RandomSpawn : MonoBehaviour
 
 	void OnEnable ()
 	{
-		dustBox = GameObject.Find ("dustbox") as GameObject;
+		dustBox = GameObject.Find ("dustbox");
 		if (dustBox == null)
 			dustBox = new GameObject ("dustbox");
 
