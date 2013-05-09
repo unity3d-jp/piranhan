@@ -95,12 +95,14 @@ public class GameManager : MonoSingleton<GameManager>
 		
 		yield return new WaitForSeconds(clip.length);
 		
+		Destroy(Dustbox.instance.gameObject);
 		Application.LoadLevel ("Clear");
 	}
 
 	public IEnumerator GameOver ()
 	{
 		yield return new WaitForSeconds(2);
+		Destroy(Dustbox.instance.gameObject);
 		
 		MusicController sound = GameObject.FindObjectOfType (typeof(MusicController)) as MusicController;
 		if (sound != null)
