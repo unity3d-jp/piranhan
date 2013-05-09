@@ -41,7 +41,7 @@ public class BulletController : MonoBehaviour
 	
 	void OnTriggerEnter (Collider collision)
 	{
-		if (collision.gameObject.tag != "Player")
+		if (!collision.CompareTag ("Player"))
 			Destroy (gameObject);
 	}
 
