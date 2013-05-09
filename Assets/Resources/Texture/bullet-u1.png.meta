@@ -1,5 +1,9 @@
 fileFormatVersion: 2
 guid: 8490691efbff74bcaa7b43f666ac5e70
+labels:
+- Bullet
+- Game
+- Up
 TextureImporter:
   serializedVersion: 2
   mipmaps:

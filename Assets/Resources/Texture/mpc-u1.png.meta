@@ -2,6 +2,8 @@ fileFormatVersion: 2
 guid: a9132e03579a740459d0173952a1ef13
 labels:
 - Cat
+- Game
+- SpriteAnimation
 - Up
 TextureImporter:
   serializedVersion: 2

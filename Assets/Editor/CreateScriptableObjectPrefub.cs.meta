@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: e12e746c7c30c4902a2df6eac157a381
+labels:
+- ScriptableObject
 MonoImporter:
   serializedVersion: 2
   defaultReferences: []

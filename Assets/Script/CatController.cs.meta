@@ -1,5 +1,9 @@
 fileFormatVersion: 2
 guid: 69ce401a652f64dff9fffb0bf9c7c6a9
+labels:
+- Cat
+- Controller
+- Game
 MonoImporter:
   serializedVersion: 2
   defaultReferences: []

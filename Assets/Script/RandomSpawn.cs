@@ -7,11 +7,10 @@ public class RandomSpawn : MonoBehaviour
 	GameManager manager;
 	[SerializeField]
 	GameObject fishPrefab;
-	public float spawnPercent = 2;
+	public float spawnPercent = 2f;
 	public int spawnCount = 0;
 	[SerializeField]
 	Transform left = null, right = null;
-	private GameObject dustBox = null;
 
 	void OnDrawGizmosSelected ()
 	{
@@ -23,10 +22,6 @@ public class RandomSpawn : MonoBehaviour
 
 	void OnEnable ()
 	{
-		dustBox = GameObject.Find ("dustbox") as GameObject;
-		if (dustBox == null)
-			dustBox = new GameObject ("dustbox");
-
 		StartCoroutine (SpawnLoop ());
 		animation.enabled = true;
 	}
@@ -35,14 +30,13 @@ public class RandomSpawn : MonoBehaviour
 	{
 		StopAllCoroutines ();
 		animation.enabled = false;
-		dustBox = null;
 	}
 	
 	IEnumerator SpawnLoop ()
 	{
 		while (true) {
 			Spawn ();
-			yield return new WaitForSeconds(spawnPercent);
+			yield return new WaitForSeconds (spawnPercent);
 		}
 	}
 	
@@ -54,15 +48,11 @@ public class RandomSpawn : MonoBehaviour
 		
 		spawnCount ++;
 		
-		if (dustBox == null)
-			dustBox = new GameObject ("dustbox");
-		
 		float position = Random.Range (left.transform.position.x, right.transform.position.x);
 		
 		GameObject fish = GameObject.Instantiate (fishPrefab) as GameObject;
 		fish.transform.position = transform.position + Vector3.left * position + Vector3.forward * 20;
-		fish.transform.parent = dustBox.transform;
-		
+		fish.transform.parent = Dustbox.Instance.transform;
 	}
 	
 }

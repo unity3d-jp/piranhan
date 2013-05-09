@@ -1,4 +1,7 @@
 fileFormatVersion: 2
 guid: e12cf200369b14c239b85ef45990f845
+labels:
+- Background
+- Sprite
 ShaderImporter:
   userData: 

@@ -64,8 +64,14 @@ public class GameManager : MonoBehaviour
 	
 	public void ResetGame ()
 	{
+<<<<<<< HEAD
 		GameObject dustbox = GameObject.Find ("dustbox") as GameObject;
 		Destroy (dustbox);
+=======
+		GameObject dustbox = GameObject.Find ("dustbox");
+		if (dustbox != null)
+			Destroy (dustbox);
+>>>>>>> 01db167a46f9384eca327b52c2fb67ed43260a25
 		
 		CatController cat = GameObject.FindObjectOfType (typeof(CatController)) as CatController;
 		cat.Reset ();
@@ -89,8 +95,12 @@ public class GameManager : MonoBehaviour
 	
 	IEnumerator GameClear ()
 	{
+<<<<<<< HEAD
 		GameObject dustbox = GameObject.Find ("dustbox") as GameObject;
 		dustbox.BroadcastMessage ("Stop", SendMessageOptions.DontRequireReceiver);
+=======
+		Dustbox.Instance.BroadcastMessage ("Stop", SendMessageOptions.DontRequireReceiver);
+>>>>>>> 01db167a46f9384eca327b52c2fb67ed43260a25
 		RandomSpawn spawn = GameObject.FindObjectOfType (typeof(RandomSpawn)) as RandomSpawn;
 		spawn.enabled = false;
 		
@@ -119,6 +129,9 @@ public class GameManager : MonoBehaviour
 			Destroy (sound.gameObject);
 	
 		Application.LoadLevel ("GameOver");
+<<<<<<< HEAD
 		yield return null;
+=======
+>>>>>>> 01db167a46f9384eca327b52c2fb67ed43260a25
 	}
 }

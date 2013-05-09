@@ -1,4 +1,10 @@
 fileFormatVersion: 2
 guid: 069eb3e6f864447ba883f51169710939
+labels:
+- Game
+- GameOver
+- Point
+- System
+- Title
 NativeFormatImporter:
   userData: 

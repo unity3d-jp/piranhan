@@ -1,5 +1,9 @@
 fileFormatVersion: 2
 guid: 3528a88afaff84812ad819b558c69e0e
+labels:
+- Background
+- Game
+- Test
 TextureImporter:
   serializedVersion: 2
   mipmaps:

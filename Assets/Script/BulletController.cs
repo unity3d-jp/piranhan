@@ -6,6 +6,7 @@ public class BulletController : MonoBehaviour
 	
 	[HideInInspector]
 	public Vector3 direction = Vector3.up;
+<<<<<<< HEAD
 	public float speed = 4;
 	private readonly static float margin = 0.02f;
 	
@@ -15,6 +16,14 @@ public class BulletController : MonoBehaviour
 		if (dust == null)
 			dust = new GameObject ("dustbox");
 		transform.parent = dust.transform;
+=======
+	public float speed = 4f;
+	private const float margin = 0.02f;
+	
+	void Start ()
+	{
+		transform.parent = Dustbox.Instance.transform;
+>>>>>>> 01db167a46f9384eca327b52c2fb67ed43260a25
 		
 		AudioClip shootAudio = Resources.Load ("Audio/shot1") as AudioClip;
 		AudioSource.PlayClipAtPoint (shootAudio, Vector3.zero);
@@ -26,7 +35,7 @@ public class BulletController : MonoBehaviour
 		if (Time.timeScale == 0)
 			return;
 		
-		transform.position += direction * speed;
+		transform.Translate (direction * speed);
 		
 		Vector3 bulletScreenPos = Camera.mainCamera.WorldToViewportPoint (transform.position);
 		if (bulletScreenPos.x < 0 - margin || bulletScreenPos.x > 1 + margin || 

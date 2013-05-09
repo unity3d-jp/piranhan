@@ -2,6 +2,8 @@ fileFormatVersion: 2
 guid: 768d47a871bbc45be88271bda11d6d60
 labels:
 - Cat
+- Game
+- SpriteAnimation
 TextureImporter:
   serializedVersion: 2
   mipmaps:
