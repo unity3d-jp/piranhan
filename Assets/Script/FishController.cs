@@ -111,7 +111,7 @@ public class FishController : MonoBehaviour
 	
 	void OnTriggerEnter (Collider collision)
 	{
-		if (collision.gameObject.tag.Equals ("Bullet")) 
+		if (collision.CompareTag ("Bullet")) 
 			StartCoroutine (Dead ());
 	}
 }

@@ -53,7 +53,7 @@ public class CatController : MonoBehaviour
 	
 	void OnTriggerEnter (Collider collision)
 	{
-		if (collision.gameObject.tag.Equals ("Enemy")) {
+		if (collision.CompareTag ("Enemy")) {
 			GameManager.Miss ();
 			catAnimation.failed.enabled = true;
 			collider.enabled = false;
