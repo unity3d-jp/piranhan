@@ -12,6 +12,7 @@ public class GameManager : MonoSingleton<GameManager>
 	public override void Init ()
 	{
 		mainCamera = Camera.mainCamera;
+		ScoreManager.instance.Reset();
 	}
 
 	public static void DestroyEnemy (int addScorePoint)
