@@ -22,11 +22,10 @@ public class GameManager : MonoSingleton<GameManager>
 
 	private static void AddKillCount ()
 	{
-		GameManager manager = GameManager.instance;
-		manager.killCount += 1;
+		instance.killCount += 1;
 		// clear
-		if (manager.killCount >= manager.clearCount)
-			manager.StartCoroutine (manager.GameClear ());
+		if (instance.killCount >= instance.clearCount)
+			instance.StartCoroutine (instance.GameClear ());
 	}
 
 	public static void Miss ()
@@ -38,19 +37,18 @@ public class GameManager : MonoSingleton<GameManager>
 		spawn.enabled = false;
 		
 		
-		GameManager manager = GameManager.instance;
-		manager.hp -= 1;
+		instance.hp -= 1;
 
-		spawn.spawnCount = manager.killCount - 1;
+		spawn.spawnCount = instance.killCount - 1;
 		
 		
 		// GameOver
-		if (manager.hp <= 0)
-			manager.StartCoroutine (manager.GameOver ());
+		if (instance.hp <= 0)
+			instance.StartCoroutine (instance.GameOver ());
 		else
-			manager.animation.Play ();
+			instance.animation.Play ();
 
-		manager.animation.Play ();
+		instance.animation.Play ();
 		
 	}
 	
@@ -80,24 +78,24 @@ public class GameManager : MonoSingleton<GameManager>
 	
 	IEnumerator GameClear ()
 	{
-		Dustbox.instance.StopFishes ();
-		RandomSpawn spawn = GameObject.FindObjectOfType (typeof(RandomSpawn)) as RandomSpawn;
-		spawn.enabled = false;
 		
+		RandomSpawn spawn = GameObject.FindObjectOfType (typeof(RandomSpawn)) as RandomSpawn;
 		PlayerController controller = GameObject.FindObjectOfType (typeof(PlayerController)) as PlayerController;
+		MusicController sound = GameObject.FindObjectOfType (typeof(MusicController))  as MusicController;
+		AudioClip clip = Resources.Load ("Audio/bgm-jingle1") as AudioClip;
+		
+		Dustbox.instance.StopFishes ();
+		spawn.enabled = false;
 		controller.enabled = false;
 		
-		MusicController sound = GameObject.FindObjectOfType (typeof(MusicController))  as MusicController;
 		if (sound != null)
 			Destroy (sound.gameObject);
 		
-		AudioClip clip = Resources.Load ("Audio/bgm-jingle1") as AudioClip;
 		AudioSource.PlayClipAtPoint (clip, Vector3.zero);
 		
 		yield return new WaitForSeconds(clip.length);
-
-		Application.LoadLevel ("Clear");
 		
+		Application.LoadLevel ("Clear");
 	}
 
 	public IEnumerator GameOver ()
