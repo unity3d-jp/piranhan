@@ -41,10 +41,8 @@ public class CatController : MonoBehaviour
 		transform.position = firstPosition;
 		catAnimation.transform.localPosition = Vector3.zero;
 		
-		GetComponent<Controller> ().enabled = true;
-		catAnimation.upWalk.enabled = true;
-		
-		direction = Vector3.up;
+		GetComponent<PlayerController> ().enabled = true;
+		catAnimation.LookUp ();
 		
 		StartCoroutine (catAnimation.Flashing ());
 	}
@@ -56,7 +54,7 @@ public class CatController : MonoBehaviour
 			catAnimation.failed.enabled = true;
 			collider.enabled = false;
 			animation.Play ("MissAnimation@Cat");
-			GetComponent<Controller> ().enabled = false;
+			GetComponent<PlayerController> ().enabled = false;
 		}
 	}
 	
