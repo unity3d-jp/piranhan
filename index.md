@@ -3,14 +3,14 @@ layout: post
 title: Top
 ---
 
-![Title Screen](images/proto1.png)
+![Title Screen](images/proto01.png)
 
 ### このプロジェクトについて
 
 このゲーム「ピラニアン」（プロトタイプ）は、２０１３年４月２７日に開催された[第２回 京都インディーズゲームセミナー Unity入門講座](http://atnd.org/events/38509)のライブコーディングセッションにおいて作成されたものです。約 1 時間のセッションの中で、2D ゲームのプロトタイプを 1 本作成しました。
 
-![Screenshot](images/proto2.png)
-![Screenshot](images/proto4.png)
+![Screenshot](images/proto02.png)
+![Screenshot](images/proto04.png)
 
 このプロトタイプバージョンは、以下の URL でプレイすることができます。
 
