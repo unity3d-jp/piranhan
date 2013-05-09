@@ -39,8 +39,8 @@ public class GameManager : MonoBehaviour
 	
 	public static void Miss ()
 	{
-		GameObject dustbox = GameObject.Find ("dustbox") as GameObject;
-		dustbox.BroadcastMessage ("Stop", SendMessageOptions.DontRequireReceiver);
+		
+		Dustbox.instance.StopFishes ();
 		RandomSpawn spawn = GameObject.FindObjectOfType (typeof(RandomSpawn)) as RandomSpawn;
 		
 		spawn.enabled = false;
@@ -64,9 +64,7 @@ public class GameManager : MonoBehaviour
 	
 	public void ResetGame ()
 	{
-		GameObject dustbox = GameObject.Find ("dustbox");
-		if (dustbox != null)
-			Destroy (dustbox);
+		Destroy (Dustbox.instance.gameObject);
 		
 		CatController cat = GameObject.FindObjectOfType (typeof(CatController)) as CatController;
 		cat.Reset ();
@@ -90,7 +88,7 @@ public class GameManager : MonoBehaviour
 	
 	IEnumerator GameClear ()
 	{
-		Dustbox.Instance.BroadcastMessage ("Stop", SendMessageOptions.DontRequireReceiver);
+		Dustbox.instance.StopFishes ();
 		RandomSpawn spawn = GameObject.FindObjectOfType (typeof(RandomSpawn)) as RandomSpawn;
 		spawn.enabled = false;
 		

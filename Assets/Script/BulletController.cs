@@ -11,7 +11,7 @@ public class BulletController : MonoBehaviour
 	
 	void Start ()
 	{
-		transform.parent = Dustbox.Instance.transform;
+		transform.parent = Dustbox.instance.transform;
 		
 		AudioClip shootAudio = Resources.Load ("Audio/shot1") as AudioClip;
 		AudioSource.PlayClipAtPoint (shootAudio, Vector3.zero);
