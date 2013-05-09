@@ -1,0 +1,156 @@
+body {
+    font-family: helvetica, hirakakupro-w3, sans-serif;
+    font-size: 10.5pt;
+    margin: 0px;
+    background-color: white;
+}
+
+h1 {
+    font-family:  HiraKakuStd-W8;
+    font-size: 28pt;
+    color: #333;
+    margin-top: 10pt;
+}
+
+h2 {
+    font-family:  HiraKakuStd-W8;
+    font-size: 16pt;
+    color: #222;
+    margin-top: 36pt;
+    border-bottom: 1px solid #666;
+}
+
+h3 {
+    font-family:  HiraMaruPro-W4;
+    font-size: 13pt;
+    color: #222;
+    margin-top: 20pt;
+}
+
+#post p {
+  line-height: 166%;
+  color: #333;
+}
+
+#post ul li {
+  line-height: 166%;
+  color: #333;
+}
+
+#post pre {
+/*  border: 1px solid #ddd; */
+    background-color: #eee;
+    padding: 0.5em 1em;
+}
+
+a {
+    text-decoration: none;
+    color: #00a;
+}
+
+a img {
+    border-style: none;
+}
+
+a:visited {
+    color: #a00;
+}
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: red;
+}
+
+
+
+
+#toolbar {
+    margin-top: 16pt;
+    margin-bottom: 16pt;
+}
+
+#tweet_button {
+    float: right;
+}
+
+#facebook_button {
+    float: right;
+}
+
+
+
+
+#title {
+  width: 800px;
+  height: 138px;
+  margin: 0px;
+  padding: 0px;
+  background-image: url(/images/title.png);
+}
+
+#navigation {
+  background-image: url(/images/navigation.png);
+  font-family: Helvetica, sans-serif;
+  font-size: 12px;
+  height: 36px;
+}
+
+#navigation ul {
+  list-style: none;
+  overflow: hidden;
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+}
+
+#navigation ul li {
+  display: inline;
+}
+
+#navigation ul li a {
+  padding: 0px 18px;
+  text-decoration: none;
+  color: white;
+  float: left;
+  margin-top: 11px;
+}
+
+#navigation a:active {
+  color: red;
+}
+
+#navigation a:hover {
+  color: red;
+}
+
+#post {
+  padding: 2em;
+}
+
+#post .caption {
+  margin-top: 0px;
+  text-align: center;
+  font-size: 90%;
+}
+
+#post p img {
+    display: block;
+    margin: 20px auto;
+}
+
+#site {
+  width: 800px;
+  margin: 0px auto 4em auto;
+}
+
+#footer {
+    font-size: 8pt;
+    text-align: right;
+    color: #666;
+    border-top: 1px solid #666;
+    margin-top: 10pt;
+    padding-top: 4pt;
+}
