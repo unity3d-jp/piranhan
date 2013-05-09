@@ -23,7 +23,7 @@ public class RandomSpawn : MonoBehaviour
 
 	void OnEnable ()
 	{
-		dustBox = GameObject.Find ("dustbox") as GameObject;
+		dustBox = GameObject.Find ("dustbox");
 		if (dustBox == null)
 			dustBox = new GameObject ("dustbox");
 

@@ -64,8 +64,9 @@ public class GameManager : MonoBehaviour
 	
 	public void ResetGame ()
 	{
-		GameObject dustbox = GameObject.Find ("dustbox") as GameObject;
-		Destroy (dustbox);
+		GameObject dustbox = GameObject.Find ("dustbox");
+		if (dustbox != null)
+			Destroy (dustbox);
 		
 		CatController cat = GameObject.FindObjectOfType (typeof(CatController)) as CatController;
 		cat.Reset ();
@@ -89,8 +90,9 @@ public class GameManager : MonoBehaviour
 	
 	IEnumerator GameClear ()
 	{
-		GameObject dustbox = GameObject.Find ("dustbox") as GameObject;
-		dustbox.BroadcastMessage ("Stop", SendMessageOptions.DontRequireReceiver);
+		GameObject dustbox = GameObject.Find ("dustbox");
+		if (dustbox != null)
+			dustbox.BroadcastMessage ("Stop", SendMessageOptions.DontRequireReceiver);
 		RandomSpawn spawn = GameObject.FindObjectOfType (typeof(RandomSpawn)) as RandomSpawn;
 		spawn.enabled = false;
 		

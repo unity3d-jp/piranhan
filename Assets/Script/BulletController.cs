@@ -11,7 +11,7 @@ public class BulletController : MonoBehaviour
 	
 	void Start ()
 	{
-		GameObject dust = GameObject.Find ("dustbox") as GameObject;
+		GameObject dust = GameObject.Find ("dustbox");
 		if (dust == null)
 			dust = new GameObject ("dustbox");
 		transform.parent = dust.transform;
