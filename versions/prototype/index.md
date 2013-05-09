@@ -1,5 +1,5 @@
 ---
-layout: webplayer
+layout: post
 title: Prototype
 ---
 
