@@ -6,8 +6,8 @@ public class BulletController : MonoBehaviour
 	
 	[HideInInspector]
 	public Vector3 direction = Vector3.up;
-	public float speed = 4;
-	private readonly static float margin = 0.02f;
+	public float speed = 4f;
+	private const float margin = 0.02f;
 	
 	void Start ()
 	{

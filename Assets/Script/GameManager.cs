@@ -121,6 +121,5 @@ public class GameManager : MonoBehaviour
 			Destroy (sound.gameObject);
 	
 		Application.LoadLevel ("GameOver");
-		yield return null;
 	}
 }

@@ -106,7 +106,7 @@ public class FishController : MonoBehaviour
 		GameObject score = GameObject.Instantiate (Resources.Load (scoreName)) as GameObject;
 		Destroy (score, score.animation ["pointUp@point"].length);
 		score.transform.position = gameObject.transform.position;
-		Destroy (gameObject.transform.parent.gameObject);
+		Destroy (transform.parent.gameObject);
 	}
 	
 	void OnTriggerEnter (Collider collision)
