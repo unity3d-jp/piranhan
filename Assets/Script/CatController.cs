@@ -7,35 +7,33 @@ public class CatController : MonoBehaviour
 	CatAnimationController catAnimation;
 	[SerializeField]
 	float speed = 60;
-	[HideInInspector]
-	public Vector3 direction;
 	private Vector3 firstPosition;
 	
 	void Start ()
 	{
-		catAnimation = transform.GetComponentInChildren<CatAnimationController> ();
+		catAnimation = GetCatAnimationController ();
 		firstPosition = transform.position;
-		direction = Vector3.up;
+		catAnimation.LookUp ();
 	}
 	
-	public void MoveLeft ()
+	public CatAnimationController GetCatAnimationController ()
 	{
-		direction = Vector3.left;
-		transform.position += direction * speed * Time.deltaTime;
-		catAnimation.leftWalk.enabled = true;
+		return transform.GetComponentInChildren<CatAnimationController> ();
 	}
 	
-	public void MoveRight ()
+	public void Move (float direction)
 	{
-		direction = Vector3.right;
-		transform.position += direction * speed * Time.deltaTime;
-		catAnimation.rightWalk.enabled = true;
+		if (direction < 0) 
+			catAnimation.MoveLeft ();
+		else 
+			catAnimation.MoveRight ();
+		
+		transform.Translate (catAnimation.direction * speed * Time.deltaTime);
 	}
-	
-	public void MoveUp ()
+
+	public void LookUp ()
 	{
-		catAnimation.upWalk.enabled = true;
-		direction = Vector3.up;
+		catAnimation.LookUp ();
 	}
 
 	public void Reset ()
@@ -43,10 +41,8 @@ public class CatController : MonoBehaviour
 		transform.position = firstPosition;
 		catAnimation.transform.localPosition = Vector3.zero;
 		
-		GetComponent<Controller> ().enabled = true;
-		catAnimation.upWalk.enabled = true;
-		
-		direction = Vector3.up;
+		GetComponent<PlayerController> ().enabled = true;
+		catAnimation.LookUp ();
 		
 		StartCoroutine (catAnimation.Flashing ());
 	}
@@ -58,13 +54,12 @@ public class CatController : MonoBehaviour
 			catAnimation.failed.enabled = true;
 			collider.enabled = false;
 			animation.Play ("MissAnimation@Cat");
-			GetComponent<Controller> ().enabled = false;
+			GetComponent<PlayerController> ().enabled = false;
 		}
 	}
 	
 	void Dead ()
 	{
-		GameObject manager = GameObject.FindWithTag ("GameManager") as GameObject;
-		StartCoroutine (manager.GetComponent<GameManager> ().GameOver ());
+		StartCoroutine (GameManager.instance.GameOver ());
 	}
 }

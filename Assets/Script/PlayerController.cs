@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class Controller : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
 
 	private CatController controller;
@@ -16,11 +16,9 @@ public class Controller : MonoBehaviour
 	void Update ()
 	{
 		if (Input.GetAxis ("Vertical") > 0)
-			controller.MoveUp ();
-		else if (Input.GetAxis ("Horizontal") < 0)
-			controller.MoveLeft ();
-		else if (Input.GetAxis ("Horizontal") > 0)
-			controller.MoveRight ();
+			controller.LookUp ();
+		else if (Input.GetAxis ("Horizontal") != 0f)
+			controller.Move (Input.GetAxis ("Horizontal"));
 
 		if (Input.GetButtonDown ("Fire1"))
 			shot.Shoot ();

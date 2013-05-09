@@ -1,23 +1,11 @@
 using UnityEngine;
 using System.Collections;
 
-public class PrologueManager : MonoBehaviour
+public class PrologueManager : MonoSingleton<PrologueManager>
 {
-
-	// Use this for initialization
 	IEnumerator Start ()
 	{
-		
-		
-		yield return new WaitForSeconds(3.5f);
-		
-//		iTween.CameraFadeAdd();
-//		iTween.CameraFadeTo(1, 1);
-
-		yield return new WaitForSeconds(1f);
-
+		yield return new WaitForSeconds(4.5f);
 		Application.LoadLevel ("Game");
 	}
-	
-	
 }

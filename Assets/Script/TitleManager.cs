@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class TitleManager : MonoBehaviour
+public class TitleManager : MonoSingleton<TitleManager>
 {
 	
 	[SerializeField]
@@ -22,7 +22,6 @@ public class TitleManager : MonoBehaviour
 		GetComponent<PlaySound> ().PlayOneShot ();
 		
 		flash.enabled = false;
-		yield return null;
 		flash.offTime = 0.1f;
 		flash.onTime = 0.1f;
 

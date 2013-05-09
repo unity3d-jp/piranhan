@@ -12,21 +12,8 @@ public class ScoreController : MonoBehaviour
 		tmesh = GetComponent<TextMesh> ();
 	}
 	
-	void OnEnable ()
+	void Update ()
 	{
-		StartCoroutine (ScoreUpdate ());
-	}
-	
-	void OnDisable ()
-	{
-		StopAllCoroutines ();
-	}
-	
-	IEnumerator ScoreUpdate ()
-	{
-		while (true) {
-			tmesh.text = string.Format ("{0}", PlayerPrefs.GetInt ("score"), 0);
-			yield return new WaitForSeconds(0.3f);
-		}
+		tmesh.text = ScoreManager.instance.Score.ToString ();
 	}
 }
