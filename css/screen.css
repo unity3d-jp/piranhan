@@ -1,19 +1,19 @@
 body {
-    font-family: helvetica, hirakakupro-w3, sans-serif;
+    font-family: Helvetica, Arial, hirakakupro-w3, "メイリオ", Meiryo, sans-serif;
     font-size: 10.5pt;
     margin: 0px;
     background-color: white;
 }
 
 h1 {
-    font-family: HiraKakuStd-W8;
+    font-family: HiraMaruPro-W4;
     font-size: 28pt;
     color: #333;
     margin-top: 10pt;
 }
 
 h2 {
-    font-family: HiraKakuStd-W8;
+    font-family: HiraMaruPro-W4;
     font-size: 16pt;
     color: #222;
     margin-top: 36pt;
