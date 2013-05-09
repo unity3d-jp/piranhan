@@ -46,4 +46,4 @@ Unity を使用した 2D ゲーム開発の参考にしてください。
 - [Unity Japan 公式 Twitter アカウント](https://twitter.com/unity_japan)
 - [お問い合わせフォーム](http://japan.unity3d.com/company/contact/)
 
-バグ報告や要望は [GitHub の issues](https://github.com/unity3d-jp/piranhan/issues) からいただけると助かります（上の窓口でもいいですよ！）。
+バグ報告や要望は [GitHub の issues](https://github.com/unity3d-jp/piranhan/issues) からいただけると助かります（使い方が分からない場合は上の窓口からでもいいですよ！）。
