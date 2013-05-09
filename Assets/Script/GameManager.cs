@@ -11,7 +11,6 @@ public class GameManager : MonoSingleton<GameManager>
 	
 	public override void Init ()
 	{
-		mainCamera = Camera.mainCamera;
 		ScoreManager.instance.Reset();
 	}
 
@@ -68,13 +67,13 @@ public class GameManager : MonoSingleton<GameManager>
 	public void Fadeout ()
 	{
 		if (mainCamera != null)
-			mainCamera.enabled = true;
+			mainCamera.enabled = false;
 	}
 	
 	public void Fadein ()
 	{
 		if (mainCamera != null)
-			mainCamera.enabled = false;
+			mainCamera.enabled = true;
 	}
 	
 	IEnumerator GameClear ()
