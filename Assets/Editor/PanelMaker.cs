@@ -10,7 +10,7 @@ public class PanelMaker : ScriptableObject
 	{
 		string assetName = string.Format ("Assets/{2}({0},{1}).asset", x, y, path);
 		
-		if( System.IO.File.Exists(assetName ) )
+		if (System.IO.File.Exists (assetName))
 			return;
 		
 		GameObject newGameobject = new GameObject ("CustomPanel");
@@ -49,18 +49,19 @@ public class PanelMaker : ScriptableObject
 		AssetDatabase.CreateAsset (mesh, assetName);
 		AssetDatabase.SaveAssets ();
 		
-		DestroyImmediate(newGameobject);
+		DestroyImmediate (newGameobject);
 	}
 	
 	[ContextMenu("Create Object")]
 	public void CreateObject ()
 	{
-		CreatePanel("polygon/Panel");
+		CreatePanel ("polygon/Panel");
 	}
+
 	[ContextMenu("Reset score")]
 	public void ResetParam ()
 	{
-		PlayerPrefs.DeleteAll();
+		PlayerPrefs.DeleteAll ();
 	}
 }
 

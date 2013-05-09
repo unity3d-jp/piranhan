@@ -1,18 +1,21 @@
 using UnityEngine;
 using System.Collections;
 
-public class SwipeCameraController : MonoBehaviour {
+public class SwipeCameraController : MonoBehaviour
+{
 	
 	public static SwipeCameraController Instance;
 
 	// Use this for initialization
-	void Awake () {
+	void Awake ()
+	{
 	
 		
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
 	
 	}
 }

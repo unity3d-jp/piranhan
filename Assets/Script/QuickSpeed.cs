@@ -1,12 +1,13 @@
 using UnityEngine;
 using System.Collections;
 
-public class QuickSpeed : MonoBehaviour {
+public class QuickSpeed : MonoBehaviour
+{
 	
 	[SerializeField]
 	SpriteAnimationController spriteAnimation;
 	
-	void SeedSet(float speed)
+	void SeedSet (float speed)
 	{
 		spriteAnimation.enabled = false;
 		spriteAnimation.time = speed;

@@ -1,24 +1,25 @@
 using UnityEngine;
 using System.Collections;
 
-public class TitleManager : MonoBehaviour {
+public class TitleManager : MonoBehaviour
+{
 	
 	[SerializeField]
 	Flashing flash;
 
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
 		
-		if( Input.GetButtonDown("Fire1"))
-		{
-			StartCoroutine(GoPrologue());
+		if (Input.GetButtonDown ("Fire1")) {
+			StartCoroutine (GoPrologue ());
 			enabled = false;
 		}
 	}
 	
-	IEnumerator GoPrologue()
+	IEnumerator GoPrologue ()
 	{
-		GetComponent<PlaySound>().PlayOneShot();
+		GetComponent<PlaySound> ().PlayOneShot ();
 		
 		flash.enabled = false;
 		yield return null;
@@ -29,6 +30,6 @@ public class TitleManager : MonoBehaviour {
 		
 		yield return new WaitForSeconds(1f);
 		
-		Application.LoadLevel("Prologue");
+		Application.LoadLevel ("Prologue");
 	}
 }
