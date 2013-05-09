@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: 6159b5faf776a44dd8fc1302b8e8dd12
+labels:
+- Fish
 AudioImporter:
   serializedVersion: 4
   format: -1

@@ -1,5 +1,8 @@
 fileFormatVersion: 2
 guid: eab41907f36d74927869de0e56ab9484
+labels:
+- Background
+- GameOver
 TextureImporter:
   serializedVersion: 2
   mipmaps:

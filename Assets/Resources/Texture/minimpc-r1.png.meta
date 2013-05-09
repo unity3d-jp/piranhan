@@ -2,7 +2,9 @@ fileFormatVersion: 2
 guid: 2c2f1bd758aa34adebdac0be110ff651
 labels:
 - Cat
+- Prologue
 - Right
+- SpriteAnimation
 TextureImporter:
   serializedVersion: 2
   mipmaps:

@@ -1,5 +1,8 @@
 fileFormatVersion: 2
 guid: 1ac858c345cf94a3f9fc18302f725c6a
+labels:
+- Game
+- Point
 TextureImporter:
   serializedVersion: 2
   mipmaps:

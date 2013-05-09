@@ -1,5 +1,10 @@
 fileFormatVersion: 2
 guid: dccc548793a6c465085ecea45ca8acf7
+labels:
+- Fish
+- Game
+- Right
+- SpriteAnimation
 TextureImporter:
   serializedVersion: 2
   mipmaps:
