@@ -6,14 +6,14 @@ body {
 }
 
 h1 {
-    font-family:  HiraKakuStd-W8;
+    font-family: HiraKakuStd-W8;
     font-size: 28pt;
     color: #333;
     margin-top: 10pt;
 }
 
 h2 {
-    font-family:  HiraKakuStd-W8;
+    font-family: HiraKakuStd-W8;
     font-size: 16pt;
     color: #222;
     margin-top: 36pt;
@@ -21,7 +21,7 @@ h2 {
 }
 
 h3 {
-    font-family:  HiraMaruPro-W4;
+    font-family: HiraMaruPro-W4;
     font-size: 13pt;
     color: #222;
     margin-top: 20pt;
@@ -82,49 +82,6 @@ a:active {
 
 
 
-
-#title {
-  width: 800px;
-  height: 138px;
-  margin: 0px;
-  padding: 0px;
-  background-image: url(/images/title.png);
-}
-
-#navigation {
-  background-image: url(/images/navigation.png);
-  font-family: Helvetica, sans-serif;
-  font-size: 12px;
-  height: 36px;
-}
-
-#navigation ul {
-  list-style: none;
-  overflow: hidden;
-  clear: both;
-  margin: 0px;
-  padding: 0px;
-}
-
-#navigation ul li {
-  display: inline;
-}
-
-#navigation ul li a {
-  padding: 0px 18px;
-  text-decoration: none;
-  color: white;
-  float: left;
-  margin-top: 11px;
-}
-
-#navigation a:active {
-  color: red;
-}
-
-#navigation a:hover {
-  color: red;
-}
 
 #post {
   padding: 2em;
