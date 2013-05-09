@@ -90,9 +90,7 @@ public class GameManager : MonoBehaviour
 	
 	IEnumerator GameClear ()
 	{
-		GameObject dustbox = GameObject.Find ("dustbox");
-		if (dustbox != null)
-			dustbox.BroadcastMessage ("Stop", SendMessageOptions.DontRequireReceiver);
+		Dustbox.Instance.BroadcastMessage ("Stop", SendMessageOptions.DontRequireReceiver);
 		RandomSpawn spawn = GameObject.FindObjectOfType (typeof(RandomSpawn)) as RandomSpawn;
 		spawn.enabled = false;
 		

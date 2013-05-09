@@ -11,10 +11,7 @@ public class BulletController : MonoBehaviour
 	
 	void Start ()
 	{
-		GameObject dust = GameObject.Find ("dustbox");
-		if (dust == null)
-			dust = new GameObject ("dustbox");
-		transform.parent = dust.transform;
+		transform.parent = Dustbox.Instance.transform;
 		
 		AudioClip shootAudio = Resources.Load ("Audio/shot1") as AudioClip;
 		AudioSource.PlayClipAtPoint (shootAudio, Vector3.zero);
