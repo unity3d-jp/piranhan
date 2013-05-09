@@ -26,7 +26,7 @@ public class BulletController : MonoBehaviour
 		if (Time.timeScale == 0)
 			return;
 		
-		transform.position += direction * speed;
+		transform.Translate (direction * speed);
 		
 		Vector3 bulletScreenPos = Camera.mainCamera.WorldToViewportPoint (transform.position);
 		if (bulletScreenPos.x < 0 - margin || bulletScreenPos.x > 1 + margin || 

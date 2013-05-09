@@ -33,7 +33,7 @@ public class FishController : MonoBehaviour
 		deadSound = Resources.Load ("Audio/destroy1") as AudioClip;
 		player = GameObject.FindWithTag ("Player");
 		
-		transform.position += transform.forward * 22;
+		transform.Translate (transform.forward * 22);
 	}
 	
 	void Update ()
