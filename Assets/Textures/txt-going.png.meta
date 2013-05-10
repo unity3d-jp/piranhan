@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: a8b43297c169a40f7a3fad84338076de
+labels:
+- Prologue
 TextureImporter:
   serializedVersion: 2
   mipmaps:

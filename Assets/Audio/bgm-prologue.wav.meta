@@ -1,5 +1,8 @@
 fileFormatVersion: 2
 guid: 737259c0cc9654a47adf082df9362c10
+labels:
+- Game
+- Prologue
 AudioImporter:
   serializedVersion: 4
   format: 0

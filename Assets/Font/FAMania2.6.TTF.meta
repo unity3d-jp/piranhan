@@ -1,5 +1,10 @@
 fileFormatVersion: 2
 guid: 35f0c2c32614b4899943319abc160abf
+labels:
+- Game
+- GameOver
+- Prologue
+- Ui
 TrueTypeFontImporter:
   serializedVersion: 2
   fontSize: 16

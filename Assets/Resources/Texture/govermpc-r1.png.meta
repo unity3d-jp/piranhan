@@ -2,7 +2,9 @@ fileFormatVersion: 2
 guid: 0d0a0b0d588834a269be8db7d6fa25d9
 labels:
 - Cat
+- GameOver
 - Right
+- SpriteAnimation
 TextureImporter:
   serializedVersion: 2
   mipmaps:

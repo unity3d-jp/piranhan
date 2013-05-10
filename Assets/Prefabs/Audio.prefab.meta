@@ -1,4 +1,8 @@
 fileFormatVersion: 2
 guid: 9719fdf56a5cf4bb39bdabbbe83d36f0
+labels:
+- Game
+- Prologue
+- System
 NativeFormatImporter:
   userData: 

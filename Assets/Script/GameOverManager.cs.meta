@@ -2,6 +2,7 @@ fileFormatVersion: 2
 guid: c72f36701598d4516bad8ef456355cf9
 labels:
 - GameOver
+- System
 - Ui
 MonoImporter:
   serializedVersion: 2

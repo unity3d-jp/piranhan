@@ -1,4 +1,7 @@
 fileFormatVersion: 2
 guid: 1fcb855718a7447d59fb1b9eaefd12d3
+labels:
+- Cat
+- Game
 NativeFormatImporter:
   userData: 

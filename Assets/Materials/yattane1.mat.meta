@@ -1,4 +1,7 @@
 fileFormatVersion: 2
 guid: 39bd603a1639543938411a570a32ae5a
+labels:
+- Background
+- Clear
 NativeFormatImporter:
   userData: 

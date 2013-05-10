@@ -3,6 +3,8 @@ guid: 115f0af17468e41da811f4fe4010d86c
 labels:
 - Cat
 - Left
+- Prologue
+- SpriteAnimation
 TextureImporter:
   serializedVersion: 2
   mipmaps:

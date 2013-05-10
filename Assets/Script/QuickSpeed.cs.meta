@@ -2,6 +2,7 @@ fileFormatVersion: 2
 guid: 04ce323543fe44988a325f8e93d641c8
 labels:
 - Prologue
+- SpriteAnimation
 MonoImporter:
   serializedVersion: 2
   defaultReferences: []

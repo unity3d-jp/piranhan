@@ -1,4 +1,11 @@
 fileFormatVersion: 2
 guid: ff779190920e34fc7a117331fd004fc7
+labels:
+- Game
+- GameOver
+- Prologue
+- Title
+- Ui
+- System
 NativeFormatImporter:
   userData: 

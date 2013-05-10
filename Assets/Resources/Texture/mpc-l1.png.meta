@@ -2,7 +2,9 @@ fileFormatVersion: 2
 guid: bf6fc21d42fd24c3aa5c4ce2f8a96734
 labels:
 - Cat
+- Game
 - Left
+- SpriteAnimation
 TextureImporter:
   serializedVersion: 2
   mipmaps:

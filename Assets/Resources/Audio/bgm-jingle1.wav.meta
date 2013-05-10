@@ -1,5 +1,8 @@
 fileFormatVersion: 2
 guid: 4089a1f98b27e4400af40d6e2236de75
+labels:
+- Clear
+- Game
 AudioImporter:
   serializedVersion: 4
   format: -1

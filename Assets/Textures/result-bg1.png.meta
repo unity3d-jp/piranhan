@@ -1,5 +1,8 @@
 fileFormatVersion: 2
 guid: 624437a90081c4bb4bfc18ab849fd4c0
+labels:
+- Background
+- Clear
 TextureImporter:
   serializedVersion: 2
   mipmaps:

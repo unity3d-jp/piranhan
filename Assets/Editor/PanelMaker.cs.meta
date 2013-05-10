@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: b52eaff2009f04d49a540dc1b934f5d0
+labels:
+- Sprite
 MonoImporter:
   serializedVersion: 2
   defaultReferences: []

@@ -10,12 +10,12 @@ public class HighScoreController : MonoBehaviour
 	void Start ()
 	{
 		text = GetComponent<TextMesh> ();
+		ScoreManager.instance.HighScore = PlayerPrefs.GetInt ("highscore");
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-	
-		text.text = PlayerPrefs.GetInt ("highscore", 0).ToString ();
+		text.text = ScoreManager.instance.HighScore.ToString ();
 	}
 }

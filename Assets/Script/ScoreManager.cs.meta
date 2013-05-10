@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8251f5c6cae514a65a1f064cbf5212eb
+labels:
+- Clear
+- Game
+- GameOver
+- Point
+- Title
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

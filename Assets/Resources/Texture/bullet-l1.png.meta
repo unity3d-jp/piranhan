@@ -1,5 +1,9 @@
 fileFormatVersion: 2
 guid: c1ec9f93b37f945ada9c5614ffab7ee4
+labels:
+- Bullet
+- Game
+- Left
 TextureImporter:
   serializedVersion: 2
   mipmaps:

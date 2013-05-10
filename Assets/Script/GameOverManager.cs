@@ -1,11 +1,8 @@
 using UnityEngine;
 using System.Collections;
 
-public class GameOverManager : MonoBehaviour
+public class GameOverManager : MonoSingleton<GameOverManager>
 {
-
-	
-	// Update is called once per frame
 	void Update ()
 	{
 		
