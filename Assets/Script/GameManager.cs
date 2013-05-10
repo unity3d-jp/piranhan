@@ -11,7 +11,7 @@ public class GameManager : MonoSingleton<GameManager>
 	
 	public override void Init ()
 	{
-		mainCamera = Camera.mainCamera;
+		ScoreManager.instance.Reset();
 	}
 
 	public static void DestroyEnemy (int addScorePoint)
@@ -67,13 +67,13 @@ public class GameManager : MonoSingleton<GameManager>
 	public void Fadeout ()
 	{
 		if (mainCamera != null)
-			mainCamera.enabled = true;
+			mainCamera.enabled = false;
 	}
 	
 	public void Fadein ()
 	{
 		if (mainCamera != null)
-			mainCamera.enabled = false;
+			mainCamera.enabled = true;
 	}
 	
 	IEnumerator GameClear ()
@@ -97,12 +97,14 @@ public class GameManager : MonoSingleton<GameManager>
 		
 		yield return new WaitForSeconds(clip.length);
 		
+		Destroy(Dustbox.instance.gameObject);
 		Application.LoadLevel ("Clear");
 	}
 
 	public IEnumerator GameOver ()
 	{
 		yield return new WaitForSeconds(2);
+		Destroy(Dustbox.instance.gameObject);
 		
 		MusicController sound = GameObject.FindObjectOfType (typeof(MusicController)) as MusicController;
 		if (sound != null)
