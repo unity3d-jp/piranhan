@@ -87,7 +87,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ff779190920e34fc7a117331fd004fc7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ff779190920e34fc7a117331fd004fc7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -111,7 +111,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2000000, guid: ff779190920e34fc7a117331fd004fc7, type: 2}
       propertyPath: orthographic size
-      value: 80
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 2000000, guid: ff779190920e34fc7a117331fd004fc7, type: 2}
       propertyPath: far clip plane
@@ -1497,6 +1497,51 @@ Prefab:
   m_RootGameObject: {fileID: 696299211}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1932484959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1932484960}
+  - 114: {fileID: 1932484961}
+  m_Layer: 0
+  m_Name: vpad
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1932484960
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1932484959}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &1932484961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1932484959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf78d9329f0234af59ddebe5ef1c197f, type: 3}
+  m_Name: 
+  left: 0
+  right: 0
+  up: 0
+  trigger: 0
+  dpadCenter: {x: .300000012, y: .200000003}
+  dpadRadius: .300000012
+  triggerCenter: {x: .800000012, y: .200000003}
+  triggerRadius: .200000003
 --- !u!1 &2091547415
 GameObject:
   m_ObjectHideFlags: 0
@@ -1561,7 +1606,7 @@ Camera:
   far clip plane: 185.050003
   field of view: 60
   orthographic: 1
-  orthographic size: 80
+  orthographic size: 180
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1576,7 +1621,7 @@ Transform:
   m_PrefabInternal: {fileID: 29441923}
   m_GameObject: {fileID: 2091547415}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -30}
+  m_LocalPosition: {x: 0, y: -100, z: -30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

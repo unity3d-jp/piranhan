@@ -16,16 +16,35 @@ public class VirtualPad : MonoBehaviour {
 
 	public Vector2 triggerCenter;
 	public float triggerRadius;
-	
+
+	Vector2 scDPadCenter;
+	float scDPadRadius;
+
+	Vector2 scTriggerCenter;
+	float scTriggerRadius;
+
 	void ClearInput() {
 		left = right = up = trigger = false;
 	}
 
+	void UpdateParametersWithScreenSize() {
+		float scaler = Screen.width;
+		scDPadCenter = dpadCenter * scaler;
+		scDPadRadius = dpadRadius * scaler;
+		scTriggerCenter = triggerCenter * scaler;
+		scTriggerRadius = triggerRadius * scaler;
+	}
+
+	void Start() {
+		UpdateParametersWithScreenSize();
+	}
+
 	void Update() {
+		ClearInput();
 #if (UNITY_IPHONE || UNITY_IPHONE) && !UNITY_EDITOR
 		foreach (var touch in Input.touches) {
 			if (touch.phase != TouchPhase.Ended) {
-				TestTouch(touch);
+				TestTouch(touch.position);
 			}
 		}
 #else
@@ -34,13 +53,13 @@ public class VirtualPad : MonoBehaviour {
 	}
 
 	void TestTouch(Vector2 position) {
-		if ((position - triggerCenter).magnitude < triggerRadius) {
+		if ((position - scTriggerCenter).magnitude < scTriggerRadius) {
 			trigger = true;
 			return;
 		}
 
-		if ((position - dpadCenter).magnitude < dpadRadius) {
-			var r = position - dpadCenter;
+		var r = position - scDPadCenter;
+		if (r.magnitude < scDPadRadius) {
 			if (r.x > r.y || -r.x > r.y || r.y < 0) {
 				if (r.x > 0) {
 					right = true;
@@ -56,13 +75,15 @@ public class VirtualPad : MonoBehaviour {
 	void OnDrawGizmos() {
 		Vector2 ux = new Vector2(1, 0);
 		Vector2 uy = new Vector2(0, 1);
+		
+		UpdateParametersWithScreenSize();
 
-		DrawGizmoLine(dpadCenter, dpadCenter + (uy + ux) * dpadRadius);
-		DrawGizmoLine(dpadCenter, dpadCenter + (uy - ux) * dpadRadius);
-		DrawGizmoLine(dpadCenter, dpadCenter - uy * dpadRadius);
+		DrawGizmoLine(scDPadCenter, scDPadCenter + (uy + ux) * scDPadRadius);
+		DrawGizmoLine(scDPadCenter, scDPadCenter + (uy - ux) * scDPadRadius);
+		DrawGizmoLine(scDPadCenter, scDPadCenter - uy * scDPadRadius);
 
-		DrawGizmoLine(triggerCenter - ux * triggerRadius, triggerCenter + ux * triggerRadius);
-		DrawGizmoLine(triggerCenter - uy * triggerRadius, triggerCenter + uy * triggerRadius);
+		DrawGizmoLine(scTriggerCenter - ux * scTriggerRadius, scTriggerCenter + ux * scTriggerRadius);
+		DrawGizmoLine(scTriggerCenter - uy * scTriggerRadius, scTriggerCenter + uy * scTriggerRadius);
 	}
 
 	void DrawGizmoLine(Vector2 p1, Vector2 p2) {
