@@ -8,6 +8,7 @@ public class BulletController : MonoBehaviour
 	public Vector3 direction = Vector3.up;
 	public float speed = 4f;
 	private const float margin = 0.02f;
+	private bool isDestroy = false;
 	
 	void Start ()
 	{
@@ -20,6 +21,8 @@ public class BulletController : MonoBehaviour
 	void Update ()
 	{
 		
+		if( isDestroy ) 
+			Destroy (gameObject);
 		if (Time.timeScale == 0)
 			return;
 		
@@ -39,7 +42,7 @@ public class BulletController : MonoBehaviour
 	void OnTriggerEnter (Collider collision)
 	{
 		if (!collision.CompareTag ("Player"))
-			Destroy (gameObject);
+			isDestroy = true;
 	}
 
 }
