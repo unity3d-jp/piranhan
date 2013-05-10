@@ -21,11 +21,11 @@ public class PlayerController : MonoBehaviour
 	{
 #if (UNITY_IPHONE || UNITY_ANDROID) && !UNITY_EDITOR
 		if (vpad.up)
-			controller.MoveUp ();
+			controller.LookUp ();
 		else if (vpad.left)
-			controller.MoveLeft ();
+			controller.Move (-1);
 		else if (vpad.right)
-			controller.MoveRight ();
+			controller.Move (1);
 		
 		if (vpad.trigger)
 			shot.Shoot ();
