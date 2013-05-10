@@ -9,6 +9,7 @@ public class CatAnimationController : MonoBehaviour
 	public SpriteAnimationController rightWalk = null;
 	public SpriteAnimationController upWalk = null;
 	public SpriteAnimationController failed = null;
+	public SpriteAnimationController clearAction = null;
 	public Flashing flash;
 	[HideInInspector]
 	public Vector3 direction;

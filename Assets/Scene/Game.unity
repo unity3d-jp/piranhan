@@ -1596,6 +1596,7 @@ GameObject:
   - 114: {fileID: 2136746535}
   - 114: {fileID: 2136746536}
   - 114: {fileID: 2136746537}
+  - 114: {fileID: 2136746540}
   - 114: {fileID: 2136746538}
   - 114: {fileID: 2136746539}
   m_Layer: 0
@@ -1715,5 +1716,18 @@ MonoBehaviour:
   rightWalk: {fileID: 2136746534}
   upWalk: {fileID: 2136746536}
   failed: {fileID: 2136746537}
+  clearAction: {fileID: 2136746540}
   flash: {fileID: 2136746538}
   direction: {x: 0, y: 0, z: 0}
+--- !u!114 &2136746540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2136746530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4927b549167094be8968748dbfc298d8, type: 3}
+  m_Name: 
+  time: .300000012
+  format: mpc-p{0}

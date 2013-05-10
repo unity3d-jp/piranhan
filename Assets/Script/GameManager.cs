@@ -83,10 +83,12 @@ public class GameManager : MonoSingleton<GameManager>
 		PlayerController controller = GameObject.FindObjectOfType (typeof(PlayerController)) as PlayerController;
 		MusicController sound = GameObject.FindObjectOfType (typeof(MusicController))  as MusicController;
 		AudioClip clip = Resources.Load ("Audio/bgm-jingle1") as AudioClip;
+		CatAnimationController cat = GameObject.FindObjectOfType (typeof(CatAnimationController)) as CatAnimationController;
 		
 		Dustbox.instance.StopFishes ();
 		spawn.enabled = false;
 		controller.enabled = false;
+		cat.clearAction.enabled = true;
 		
 		if (sound != null)
 			Destroy (sound.gameObject);
