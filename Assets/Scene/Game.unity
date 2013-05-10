@@ -1506,6 +1506,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1932484960}
   - 114: {fileID: 1932484961}
+  - 33: {fileID: 1932484962}
+  - 23: {fileID: 1932484963}
   m_Layer: 0
   m_Name: vpad
   m_TagString: Untagged
@@ -1520,8 +1522,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1932484959}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -220, z: 0}
+  m_LocalScale: {x: 16, y: 8, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!114 &1932484961
@@ -1542,6 +1544,31 @@ MonoBehaviour:
   dpadRadius: .300000012
   triggerCenter: {x: .800000012, y: .200000003}
   triggerRadius: .200000003
+--- !u!33 &1932484962
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1932484959}
+  m_Mesh: {fileID: 4300000, guid: eb4e78999319e43869dfe43f501f03a0, type: 2}
+--- !u!23 &1932484963
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1932484959}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 0b79248d669f7469cadb4e54df5c4335, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
 --- !u!1 &2091547415
 GameObject:
   m_ObjectHideFlags: 0
