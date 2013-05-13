@@ -23,10 +23,9 @@ public class BulletController : MonoBehaviour
 		
 		if( isDestroy ) 
 			Destroy (gameObject);
-		if (Time.timeScale == 0)
-			return;
 		
-		transform.Translate (direction * speed, Space.World);
+		
+		transform.Translate (direction * speed * 60 * Time.deltaTime, Space.World);
 		
 		Vector3 bulletScreenPos = Camera.mainCamera.WorldToViewportPoint (transform.position);
 		if (bulletScreenPos.x < 0 - margin || bulletScreenPos.x > 1 + margin || 

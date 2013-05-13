@@ -8,4 +8,11 @@ public class Dustbox : MonoSingleton<Dustbox>
 			fish.Stop ();
 		}
 	}
+	
+	public void StopBullet()
+	{
+		foreach (BulletController bullet  in GetComponentsInChildren<BulletController>()) {
+			bullet.Stop();
+		}
+	}
 }

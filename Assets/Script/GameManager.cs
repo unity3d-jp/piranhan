@@ -35,10 +35,9 @@ public class GameManager : MonoSingleton<GameManager>
 		RandomSpawn spawn = GameObject.FindObjectOfType (typeof(RandomSpawn)) as RandomSpawn;
 		
 		spawn.enabled = false;
-		
+		Dustbox.instance.StopBullet();
 		
 		instance.hp -= 1;
-
 		spawn.spawnCount = instance.killCount - 1;
 		
 		
