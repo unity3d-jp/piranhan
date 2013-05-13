@@ -66,13 +66,13 @@ public class GameManager : MonoSingleton<GameManager>
 	public void Fadeout ()
 	{
 		if (mainCamera != null)
-			mainCamera.enabled = false;
+			mainCamera.enabled = true;
 	}
 	
 	public void Fadein ()
 	{
 		if (mainCamera != null)
-			mainCamera.enabled = true;
+			mainCamera.enabled = false;
 	}
 	
 	IEnumerator GameClear ()
