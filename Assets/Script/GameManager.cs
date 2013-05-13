@@ -8,6 +8,7 @@ public class GameManager : MonoSingleton<GameManager>
 	[SerializeField]
 	Camera mainCamera;
 	private int killCount = 0;
+	public bool IsBulletShooted{ get; set;}
 	
 	public override void Init ()
 	{

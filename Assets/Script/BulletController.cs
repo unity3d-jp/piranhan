@@ -33,6 +33,11 @@ public class BulletController : MonoBehaviour
 			Destroy (gameObject);
 	}
 	
+	void OnDestroy()
+	{
+		GameManager.instance.IsBulletShooted = false;
+	}
+	
 	public void Stop ()
 	{
 		enabled = false;

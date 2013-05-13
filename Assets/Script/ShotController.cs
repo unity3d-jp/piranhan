@@ -16,8 +16,10 @@ public class ShotController : MonoBehaviour
 	
 	public void Shoot ()
 	{
-		if (GameObject.FindGameObjectWithTag ("Bullet") != null) 
+		if( GameManager.instance.IsBulletShooted )
 			return;
+		
+		GameManager.instance.IsBulletShooted = true;
 		
 		GameObject bullet = GameObject.Instantiate (bulletPrefab) as GameObject;
 		bullet.transform.position = transform.position + Vector3.down * 0.1f + Vector3.forward * 0.2f;
