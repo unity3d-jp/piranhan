@@ -34,6 +34,6 @@ public class DeploymentTool {
 			"- [トップページへ戻る](/piranhan)"
 		};
 
-		System.IO.File.WriteAllLines(Path.Combine(destPath, "index.md"), lines, Encoding.UTF8);
+		System.IO.File.WriteAllLines(Path.Combine(destPath, "index.md"), lines, new UTF8Encoding(false));
 	}
 }
