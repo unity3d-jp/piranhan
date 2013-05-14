@@ -6,7 +6,7 @@ using System.Text;
 using System.Globalization;
 
 public class DeploymentTool {
-	[MenuItem("Deploy/Build Production Page")]
+	[MenuItem("Deploy/Build GitHub Page")]
 	static void BuildProductionPage () {
 		string[] scenes = new string[EditorBuildSettings.scenes.Length];
 		for (int i = 0; i < scenes.Length; i++) {
