@@ -13,10 +13,13 @@ public class DeploymentTool {
 			scenes[i] = EditorBuildSettings.scenes[i].path;
 		}
 
-		var path = EditorUtility.SaveFolderPanel("Build a page to directory", "", "");
-		path = Path.Combine(path, "main");
+		var destPath = EditorUtility.SaveFolderPanel("Build a page to directory", "", "");
+		var tempPath = Path.Combine(destPath, "main");
 
-		BuildPipeline.BuildPlayer(scenes, path, BuildTarget.WebPlayer, BuildOptions.None);
+		BuildPipeline.BuildPlayer(scenes, tempPath, BuildTarget.WebPlayer, BuildOptions.None);
+
+		System.IO.File.Move(Path.Combine(tempPath, "main.unity3d"), Path.Combine(destPath, "main.unity3d"));
+		System.IO.Directory.Delete(tempPath, true);
 
 		string[] lines = {
 			"---",
@@ -31,6 +34,6 @@ public class DeploymentTool {
 			"- [トップページへ戻る](/piranhan)"
 		};
 
-		System.IO.File.WriteAllLines(Path.Combine(path, "main.md"), lines, Encoding.UTF8);
+		System.IO.File.WriteAllLines(Path.Combine(destPath, "index.md"), lines, Encoding.UTF8);
 	}
 }
