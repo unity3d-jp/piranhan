@@ -1,8 +1,9 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using UnityEditor;
 using System.IO;
 using System.Text;
+using System.Globalization;
 
 public class DeploymentTool {
 	[MenuItem("Deploy/Build Production Page")]
@@ -17,13 +18,19 @@ public class DeploymentTool {
 
 		BuildPipeline.BuildPlayer(scenes, path, BuildTarget.WebPlayer, BuildOptions.None);
 
-		System.IO.File.WriteAllText(Path.Combine(path, "main.md"),
-		                            "---\n" +
-									"layout: webplayer\n" +
-		                            "title: Preview\n" +
-		                            "---\n" +
-		                            "このゲーム「ピラニアン」は「第２回 京都インディーズゲームセミナー Unity入門講座」のライブコーディングセッションにおいて作成されたゲームです。このページでは、完成を目指して開発している途中のバージョンをプレイできます。\n\n" +
-		                            "- [トップページへ戻る](/piranhan)",
-		                            Encoding.UTF8);
+		string[] lines = {
+			"---",
+			"layout: webplayer",
+			"title: Preview",
+			"---",
+			"",
+			"(Built on " + System.DateTime.Now.ToString("g", CultureInfo.CreateSpecificCulture("ja-JP")) + ")",
+			"",
+			"このゲーム「ピラニアン」は「第２回 京都インディーズゲームセミナー Unity 入門講座」のライブコーディングセッションにおいて作成されたゲームです。このページでは、完成を目指して開発している途中のバージョンをプレイできます。",
+			"",
+			"- [トップページへ戻る](/piranhan)"
+		};
+
+		System.IO.File.WriteAllLines(Path.Combine(path, "main.md"), lines, Encoding.UTF8);
 	}
 }
