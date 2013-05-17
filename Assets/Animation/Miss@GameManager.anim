@@ -38,7 +38,7 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_Events:
   - time: 1.33333337
-    functionName: Fadein
+    functionName: Fadeout
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
@@ -52,7 +52,7 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 2.25
-    functionName: Fadeout
+    functionName: Fadein
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
