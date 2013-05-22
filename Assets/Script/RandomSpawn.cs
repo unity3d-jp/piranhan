@@ -16,9 +16,9 @@ public class RandomSpawn : MonoBehaviour
 	Transform left = null, right = null;
 	
 	[SerializeField]
-	float[] span = {};
+	StageRecodeObject stageRecode;
 	
-	public int SpawnNumber { get{ return span.Length; }}
+	public int SpawnNumber { get{ return stageRecode.stageRecodes.Length; }}
 
 	void OnDrawGizmosSelected ()
 	{
@@ -41,9 +41,9 @@ public class RandomSpawn : MonoBehaviour
 	IEnumerator SpawnLoop ()
 	{
 		while (true) {
-			yield return new WaitForSeconds (span[spawnCount]);
+			yield return new WaitForSeconds (stageRecode.stageRecodes[spawnCount].secWait);
 			Spawn ();
-			if( spawnCount >= span.Length)
+			if( spawnCount >= stageRecode.stageRecodes.Length)
 				yield break;
 		}
 	}
@@ -64,3 +64,5 @@ public class RandomSpawn : MonoBehaviour
 	}
 	
 }
+
+

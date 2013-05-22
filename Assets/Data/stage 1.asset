@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7891da50cb5d44c5092408491f549fdd, type: 3}
+  m_Name: stage 1
+  stageRecodes:
+  - secWait: 1
+    character: 1
+    x: 0
+    y: 0
+  - secWait: 1
+    character: 1
+    x: 0
+    y: 0
+  - secWait: 1
+    character: 1
+    x: 0
+    y: 0
+  - secWait: .300000012
+    character: 1
+    x: 0
+    y: 0
+  - secWait: .300000012
+    character: 1
+    x: 0
+    y: 0
+  - secWait: .300000012
+    character: 1
+    x: 0
+    y: 0
+  - secWait: .300000012
+    character: 1
+    x: 0
+    y: 0
+  - secWait: 1
+    character: 1
+    x: 0
+    y: 0
+  - secWait: 1
+    character: 1
+    x: 0
+    y: 0
