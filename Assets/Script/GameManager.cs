@@ -9,10 +9,13 @@ public class GameManager : MonoSingleton<GameManager>
 	Camera mainCamera;
 	private int killCount = 0;
 	public bool IsBulletShooted{ get; set;}
+	private RandomSpawn spawn;
+	
 	
 	public override void Init ()
 	{
 		ScoreManager.instance.Reset();
+		spawn = FindObjectOfType(typeof(RandomSpawn)) as RandomSpawn;
 	}
 
 	public static void DestroyEnemy (int addScorePoint)
@@ -25,7 +28,7 @@ public class GameManager : MonoSingleton<GameManager>
 	{
 		instance.killCount += 1;
 		// clear
-		if (instance.killCount >= instance.clearCount)
+		if (instance.killCount >= instance.spawn.SpawnNumber)
 			instance.StartCoroutine (instance.GameClear ());
 	}
 
@@ -33,13 +36,12 @@ public class GameManager : MonoSingleton<GameManager>
 	{
 		
 		Dustbox.instance.StopFishes ();
-		RandomSpawn spawn = GameObject.FindObjectOfType (typeof(RandomSpawn)) as RandomSpawn;
 		
-		spawn.enabled = false;
+		instance.spawn.enabled = false;
 		Dustbox.instance.StopBullet();
 		
 		instance.hp -= 1;
-		spawn.spawnCount = instance.killCount - 1;
+		instance.spawn.spawnCount = instance.killCount ;
 		
 		
 		// GameOver
@@ -59,7 +61,6 @@ public class GameManager : MonoSingleton<GameManager>
 		CatController cat = GameObject.FindObjectOfType (typeof(CatController)) as CatController;
 		cat.Reset ();
 
-		RandomSpawn spawn = GameObject.FindObjectOfType (typeof(RandomSpawn)) as RandomSpawn;
 		spawn.enabled = true;
 		
 	}

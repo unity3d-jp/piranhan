@@ -5,12 +5,20 @@ public class RandomSpawn : MonoBehaviour
 {
 	[SerializeField]
 	GameManager manager;
+
 	[SerializeField]
 	GameObject fishPrefab;
-	public float spawnPercent = 2f;
+	
+	[HideInInspector]
 	public int spawnCount = 0;
+
 	[SerializeField]
 	Transform left = null, right = null;
+	
+	[SerializeField]
+	float[] span = {};
+	
+	public int SpawnNumber { get{ return span.Length; }}
 
 	void OnDrawGizmosSelected ()
 	{
@@ -23,27 +31,27 @@ public class RandomSpawn : MonoBehaviour
 	void OnEnable ()
 	{
 		StartCoroutine (SpawnLoop ());
-		animation.enabled = true;
 	}
 	
 	void OnDisable ()
 	{
 		StopAllCoroutines ();
-		animation.enabled = false;
 	}
 	
 	IEnumerator SpawnLoop ()
 	{
 		while (true) {
+			yield return new WaitForSeconds (span[spawnCount]);
 			Spawn ();
-			yield return new WaitForSeconds (spawnPercent);
+			if( spawnCount >= span.Length)
+				yield break;
 		}
 	}
 	
 	public void Spawn ()
 	{
 		// spawn limit
-		if (manager.clearCount <= spawnCount)
+		if (SpawnNumber <= spawnCount)
 			return;
 		
 		spawnCount ++;

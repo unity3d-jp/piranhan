@@ -421,7 +421,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e28406010151405babb3c5a80cf02af, type: 3}
   m_Name: 
-  clearCount: 20
+  clearCount: 10
   hp: 3
   mainCamera: {fileID: 357310646}
 --- !u!111 &404278981
@@ -599,7 +599,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 572430217}
   - 114: {fileID: 572430218}
-  - 111: {fileID: 572430219}
   m_Layer: 0
   m_Name: Spawn
   m_TagString: Untagged
@@ -632,28 +631,30 @@ MonoBehaviour:
   m_Name: 
   manager: {fileID: 404278980}
   fishPrefab: {fileID: 100000, guid: 4322f8c54400d4a0f81a3b2babbdb090, type: 2}
-  spawnPercent: 2
   spawnCount: 0
   left: {fileID: 83508534}
   right: {fileID: 712144126}
---- !u!111 &572430219
-Animation:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 572430216}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 22a7440a3388747f48af6c6543b9aff2, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 22a7440a3388747f48af6c6543b9aff2, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
-  m_UserAABB:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
+  span:
+  - 3
+  - 2
+  - 1
+  - .400000006
+  - .100000001
+  - .100000001
+  - .400000006
+  - .200000003
+  - 3
+  - .400000006
+  - .200000003
+  - .400000006
+  - .200000003
+  - .400000006
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
 --- !u!1 &596302057
 GameObject:
   m_ObjectHideFlags: 0
