@@ -40,11 +40,10 @@ public class RandomSpawn : MonoBehaviour
 	
 	IEnumerator SpawnLoop ()
 	{
-		while (true) {
+		while (spawnCount < stageRecode.stageRecodes.Length) {
 			yield return new WaitForSeconds (stageRecode.stageRecodes[spawnCount].secWait);
 			Spawn ();
-			if( spawnCount >= stageRecode.stageRecodes.Length)
-				yield break;
+			spawnCount ++;
 		}
 	}
 	
@@ -54,12 +53,13 @@ public class RandomSpawn : MonoBehaviour
 		if (SpawnNumber <= spawnCount)
 			return;
 		
-		spawnCount ++;
-		
-		float position = Random.Range (left.transform.position.x, right.transform.position.x);
+		float position = stageRecode.stageRecodes[spawnCount].x;
+
+		if( position == 0 )
+			position = Random.Range (left.transform.position.x, right.transform.position.x);
 		
 		GameObject fish = GameObject.Instantiate (fishPrefab) as GameObject;
-		fish.transform.position = transform.position + Vector3.left * position + Vector3.forward * 20;
+		fish.transform.position = transform.position + Vector3.right * position + Vector3.forward * 20;
 		fish.transform.parent = Dustbox.instance.transform;
 	}
 	
