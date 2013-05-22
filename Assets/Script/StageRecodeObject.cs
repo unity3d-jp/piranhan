@@ -16,7 +16,7 @@ public class StageRecodeObject : ScriptableObject
 		public float x;
 		public float y;
 	}
-	
+#if UNITY_EDITOR	
 	[ContextMenu("to xml")]
 	public void ToXML ()
 	{
@@ -36,4 +36,5 @@ public class StageRecodeObject : ScriptableObject
 		stageRecodes = (StageRecord[]) serializer.Deserialize(stream);
 		
 	}
+#endif
 }
