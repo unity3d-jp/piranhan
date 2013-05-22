@@ -5,7 +5,7 @@ public class SpriteAnimationController : MonoBehaviour
 {
 	
 	
-	[Range(0.1f, 1f)]
+	[Range(0.05f, 1f)]
 	public float time = 0.3f;
 	[SerializeField]
 	string format = string.Empty;
