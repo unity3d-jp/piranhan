@@ -47,3 +47,47 @@ MonoBehaviour:
     character: 1
     x: 0
     y: 0
+  - secWait: 1
+    character: 1
+    x: 0
+    y: 0
+  - secWait: 1
+    character: 1
+    x: 0
+    y: 0
+  - secWait: 1
+    character: 1
+    x: 0
+    y: 0
+  - secWait: .300000012
+    character: 1
+    x: 0
+    y: 0
+  - secWait: .300000012
+    character: 1
+    x: 0
+    y: 0
+  - secWait: .300000012
+    character: 1
+    x: 0
+    y: 0
+  - secWait: .300000012
+    character: 1
+    x: 0
+    y: 0
+  - secWait: 1
+    character: 1
+    x: 0
+    y: 0
+  - secWait: 1
+    character: 1
+    x: 0
+    y: 0
+  - secWait: 1
+    character: 1
+    x: 0
+    y: 0
+  - secWait: 1
+    character: 1
+    x: 0
+    y: 0
