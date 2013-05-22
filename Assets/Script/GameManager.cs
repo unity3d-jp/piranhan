@@ -41,7 +41,6 @@ public class GameManager : MonoSingleton<GameManager>
 		Dustbox.instance.StopBullet();
 		
 		instance.hp -= 1;
-		instance.spawn.spawnCount = instance.killCount ;
 		
 		
 		// GameOver
@@ -61,6 +60,7 @@ public class GameManager : MonoSingleton<GameManager>
 		CatController cat = GameObject.FindObjectOfType (typeof(CatController)) as CatController;
 		cat.Reset ();
 
+		instance.spawn.spawnCount = instance.killCount ;
 		spawn.enabled = true;
 		
 	}
