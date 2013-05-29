@@ -54,9 +54,9 @@ public class RandomSpawn : MonoBehaviour
 			return;
 		
 		float position = stageRecode.stageRecodes[spawnCount].x;
+		if( position < 0 || position > 240 )
+			position = Random.Range (left.transform.position.x + 120, right.transform.position.x  + 120);
 
-		if( position == 0 )
-			position = Random.Range (left.transform.position.x, right.transform.position.x);
 		
 		GameObject fish = GameObject.Instantiate (fishPrefab) as GameObject;
 		fish.transform.position = transform.position + Vector3.right * (position - 120) + Vector3.forward * 20;
