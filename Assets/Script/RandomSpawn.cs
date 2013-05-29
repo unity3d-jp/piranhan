@@ -59,7 +59,7 @@ public class RandomSpawn : MonoBehaviour
 			position = Random.Range (left.transform.position.x, right.transform.position.x);
 		
 		GameObject fish = GameObject.Instantiate (fishPrefab) as GameObject;
-		fish.transform.position = transform.position + Vector3.right * position + Vector3.forward * 20;
+		fish.transform.position = transform.position + Vector3.right * (position - 120) + Vector3.forward * 20;
 		fish.transform.parent = Dustbox.instance.transform;
 	}
 	

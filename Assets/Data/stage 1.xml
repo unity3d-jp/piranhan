@@ -3,67 +3,13 @@
   <StageRecord>
     <secWait>1</secWait>
     <character>1</character>
-    <x>0</x>
+    <x>120</x>
     <y>0</y>
   </StageRecord>
   <StageRecord>
     <secWait>1</secWait>
     <character>1</character>
-    <x>0</x>
-    <y>0</y>
-  </StageRecord>
-  <StageRecord>
-    <secWait>1</secWait>
-    <character>1</character>
-    <x>0</x>
-    <y>0</y>
-  </StageRecord>
-  <StageRecord>
-    <secWait>0.3</secWait>
-    <character>1</character>
-    <x>0</x>
-    <y>0</y>
-  </StageRecord>
-  <StageRecord>
-    <secWait>0.3</secWait>
-    <character>1</character>
-    <x>0</x>
-    <y>0</y>
-  </StageRecord>
-  <StageRecord>
-    <secWait>0.3</secWait>
-    <character>1</character>
-    <x>0</x>
-    <y>0</y>
-  </StageRecord>
-  <StageRecord>
-    <secWait>0.3</secWait>
-    <character>1</character>
-    <x>0</x>
-    <y>0</y>
-  </StageRecord>
-  <StageRecord>
-    <secWait>1</secWait>
-    <character>1</character>
-    <x>0</x>
-    <y>0</y>
-  </StageRecord>
-  <StageRecord>
-    <secWait>1</secWait>
-    <character>1</character>
-    <x>0</x>
-    <y>0</y>
-  </StageRecord>
-  <StageRecord>
-    <secWait>1</secWait>
-    <character>1</character>
-    <x>0</x>
-    <y>0</y>
-  </StageRecord>
-  <StageRecord>
-    <secWait>1</secWait>
-    <character>1</character>
-    <x>0</x>
+    <x>120</x>
     <y>0</y>
   </StageRecord>
   <StageRecord>
@@ -75,49 +21,103 @@
   <StageRecord>
     <secWait>0.3</secWait>
     <character>1</character>
-    <x>0</x>
+    <x>240</x>
     <y>0</y>
   </StageRecord>
   <StageRecord>
     <secWait>0.3</secWait>
     <character>1</character>
-    <x>0</x>
+    <x>220</x>
     <y>0</y>
   </StageRecord>
   <StageRecord>
     <secWait>0.3</secWait>
     <character>1</character>
-    <x>0</x>
+    <x>210</x>
     <y>0</y>
   </StageRecord>
   <StageRecord>
     <secWait>0.3</secWait>
     <character>1</character>
-    <x>0</x>
+    <x>120</x>
     <y>0</y>
   </StageRecord>
   <StageRecord>
     <secWait>1</secWait>
     <character>1</character>
-    <x>0</x>
+    <x>10</x>
     <y>0</y>
   </StageRecord>
   <StageRecord>
     <secWait>1</secWait>
     <character>1</character>
-    <x>0</x>
+    <x>30</x>
+    <y>0</y>
+  </StageRecord>
+  <StageRecord>
+    <secWait>1</secWait>
+    <character>1</character>
+    <x>-1</x>
+    <y>0</y>
+  </StageRecord>
+  <StageRecord>
+    <secWait>1</secWait>
+    <character>1</character>
+    <x>-1</x>
+    <y>0</y>
+  </StageRecord>
+  <StageRecord>
+    <secWait>1</secWait>
+    <character>1</character>
+    <x>-1</x>
+    <y>0</y>
+  </StageRecord>
+  <StageRecord>
+    <secWait>0.3</secWait>
+    <character>1</character>
+    <x>-1</x>
+    <y>0</y>
+  </StageRecord>
+  <StageRecord>
+    <secWait>0.3</secWait>
+    <character>1</character>
+    <x>-1</x>
+    <y>0</y>
+  </StageRecord>
+  <StageRecord>
+    <secWait>0.3</secWait>
+    <character>1</character>
+    <x>-1</x>
+    <y>0</y>
+  </StageRecord>
+  <StageRecord>
+    <secWait>0.3</secWait>
+    <character>1</character>
+    <x>-1</x>
+    <y>0</y>
+  </StageRecord>
+  <StageRecord>
+    <secWait>1</secWait>
+    <character>1</character>
+    <x>-1</x>
+    <y>0</y>
+  </StageRecord>
+  <StageRecord>
+    <secWait>1</secWait>
+    <character>1</character>
+    <x>-1</x>
     <y>0</y>
   </StageRecord>	
   <StageRecord>
     <secWait>1</secWait>
     <character>1</character>
-    <x>0</x>
+    <x>-1</x>
     <y>0</y>
   </StageRecord>
   <StageRecord>
     <secWait>1</secWait>
     <character>1</character>
-    <x>0</x>
+    <x>-1</x>
     <y>0</y>
   </StageRecord>	
 </ArrayOfStageRecord>

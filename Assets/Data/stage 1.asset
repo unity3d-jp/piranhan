@@ -13,47 +13,11 @@ MonoBehaviour:
   stageRecodes:
   - secWait: 1
     character: 1
-    x: 0
+    x: 120
     y: 0
   - secWait: 1
     character: 1
-    x: 0
-    y: 0
-  - secWait: 1
-    character: 1
-    x: 0
-    y: 0
-  - secWait: .300000012
-    character: 1
-    x: 0
-    y: 0
-  - secWait: .300000012
-    character: 1
-    x: 0
-    y: 0
-  - secWait: .300000012
-    character: 1
-    x: 0
-    y: 0
-  - secWait: .300000012
-    character: 1
-    x: 0
-    y: 0
-  - secWait: 1
-    character: 1
-    x: 0
-    y: 0
-  - secWait: 1
-    character: 1
-    x: 0
-    y: 0
-  - secWait: 1
-    character: 1
-    x: 0
-    y: 0
-  - secWait: 1
-    character: 1
-    x: 0
+    x: 120
     y: 0
   - secWait: 1
     character: 1
@@ -61,33 +25,69 @@ MonoBehaviour:
     y: 0
   - secWait: .300000012
     character: 1
-    x: 0
+    x: 240
     y: 0
   - secWait: .300000012
     character: 1
-    x: 0
+    x: 220
     y: 0
   - secWait: .300000012
     character: 1
-    x: 0
+    x: 210
     y: 0
   - secWait: .300000012
     character: 1
-    x: 0
+    x: 120
     y: 0
   - secWait: 1
     character: 1
-    x: 0
+    x: 10
     y: 0
   - secWait: 1
     character: 1
-    x: 0
+    x: 30
     y: 0
   - secWait: 1
     character: 1
-    x: 0
+    x: -1
     y: 0
   - secWait: 1
     character: 1
-    x: 0
+    x: -1
+    y: 0
+  - secWait: 1
+    character: 1
+    x: -1
+    y: 0
+  - secWait: .300000012
+    character: 1
+    x: -1
+    y: 0
+  - secWait: .300000012
+    character: 1
+    x: -1
+    y: 0
+  - secWait: .300000012
+    character: 1
+    x: -1
+    y: 0
+  - secWait: .300000012
+    character: 1
+    x: -1
+    y: 0
+  - secWait: 1
+    character: 1
+    x: -1
+    y: 0
+  - secWait: 1
+    character: 1
+    x: -1
+    y: 0
+  - secWait: 1
+    character: 1
+    x: -1
+    y: 0
+  - secWait: 1
+    character: 1
+    x: -1
     y: 0
